@@ -1,7 +1,7 @@
 # Webtech group project
 
 โครงงานรายวิชา Web technology รหัสวิชา 06016312
-เพื่อที่จะเรียนรู้โครงสร้างของเว็บไซต์ ```https://playvalorant.com/th-th/```
+เพื่อที่จะเรียนรู้โครงสร้างของเว็บไซต์ <https://playvalorant.com/th-th/>
 
 ## Installation
 
