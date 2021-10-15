@@ -1,6 +1,11 @@
-Dockerfile
+Dockerfile*
+docker-compose*
 .dockerignore
-node_modules
 npm-debug.log
 README.md
+LICENSE
+.vscode
+node_modules
 .next
+.git
+.gitignore

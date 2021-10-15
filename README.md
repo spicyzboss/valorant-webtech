@@ -5,7 +5,7 @@
 
 ## Installation
 
-หลังจาก clone ไป ให้ใช้คำสั่ง
+หลังจาก clone เสร็จเรียบร้อย ให้ติดตั้ง dependencies โดยใช้คำสั่ง
 
 ```bash
 npm i
@@ -22,3 +22,27 @@ npm run dev
 # or
 yarn dev
 ```
+
+## Docker
+
+โปรเจคนี้สามารถรันบน server หรือ cloud ที่รองรับ docker ได้
+
+### Build docker image
+
+สามารถ build docker image ได้ โดยใช้คำสั่ง
+
+```bash
+docker build . -t web-valorant
+```
+
+ปล. การ build image อาจใช้เวลาหลายนาที
+
+### Run docker image
+
+หลังจาก build image เสร็จสามารถรัน docker image ได้โดยใช้คำสั่ง
+
+```bash
+docker run --name web-valorant -d -p 3000:3000 web-valorant
+```
+
+หลังจากนั้นลองเข้าไปที่ <http://localhost:3000>

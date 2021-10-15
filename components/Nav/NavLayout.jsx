@@ -6,7 +6,8 @@ const Nav = styled.nav`
     background-color: #111;
     display: flex;
     z-index: 10000;
-    /* position: fixed; */
+    position: fixed;
+    top: 0;
 `
 
 const NavLayout = ({ children }) => {
