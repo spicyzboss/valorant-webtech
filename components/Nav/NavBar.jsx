@@ -23,7 +23,7 @@ const NavBar = () => {
             <NavItem href="/leaderboards" title="กระดานผู้นำ" />
             <Dropdown title="ซัพพอร์ต">
                 <Li href="/specs" title="สเปค" />
-                <ExternalLi title="ซัพพอร์์ต" />
+                <ExternalLi title="ซัพพอร์ต" />
                 <Li href="/community-code" title="กฏระเบียบ" />
             </Dropdown>
             <Dropdown title="โซเชียล">
