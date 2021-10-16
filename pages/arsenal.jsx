@@ -1,4 +1,4 @@
-import { Head, NavBar } from '../components'
+import { Footer, Head, NavBar } from '../components'
 
 const Arsenal = () => {
     return (
@@ -6,6 +6,7 @@ const Arsenal = () => {
             <Head title="คลังแสง VALORANT: เลือกอาวุธของคุณ และดูรายละเอียดของอาวุธ" />
             <NavBar />
             <h1>Arsenal</h1>
+            <Footer />
         </>
     )
 }

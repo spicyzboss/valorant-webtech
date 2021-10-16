@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Head, NavBar } from "../components";
+import { Head, NavBar, Footer } from "../components";
 
 const Section = styled.section`
     height: 100vh;
@@ -14,6 +14,7 @@ export default function Home() {
                 <Section>
                     <h1>Hello world</h1>
                 </Section>
+                <Footer />
             </>
     )
 }

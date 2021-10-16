@@ -1,4 +1,4 @@
-import { Head, NavBar } from '../components'
+import { Footer, Head, NavBar } from '../components'
 
 const CommunityCode = () => {
     return (
@@ -6,6 +6,7 @@ const CommunityCode = () => {
             <Head title="ระเบียบชุมชนของ VALORANT" />
             <NavBar />
             <h1>CommunityCode</h1>
+            <Footer />
         </>
     )
 }

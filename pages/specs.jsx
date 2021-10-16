@@ -1,4 +1,4 @@
-import { Head, NavBar } from '../components'
+import { Footer, Head, NavBar } from '../components'
 
 const Specs = () => {
     return (
@@ -6,6 +6,7 @@ const Specs = () => {
             <Head title="สเปค VALORANT: ความต้องการขั้นต่ำ ที่แนะนำ และระดับสูง" />
             <NavBar />
             <h1>Specs</h1>
+            <Footer />
         </>
     )
 }

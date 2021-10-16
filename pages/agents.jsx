@@ -1,4 +1,4 @@
-import { Head, NavBar } from "../components";
+import { Footer, Head, NavBar } from "../components";
 
 const Agents = () => {
     return (
@@ -6,6 +6,7 @@ const Agents = () => {
             <Head title="เอเจนท์ VALORANT: เอเจนท์ทั้งหมด และสกิลของแต่ละคน" />
             <NavBar />
             <h1>Agents</h1>
+            <Footer />
         </>
     )
 }
