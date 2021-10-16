@@ -2,17 +2,17 @@ import NavLayout from "./NavLayout";
 import { NavItem } from "./NavItem";
 import { Dropdown, ExternalLi, Li } from "./NavDropdown";
 import { External } from "./NavExternalLink";
-import { ValorantLogo } from "../../styles/nav_components";
+import { ValorantLogo, RiotLogo } from "../../styles/nav_components";
 import Separator from './NavSeparator'
+import LangButton from "./LangButton";
+import PlayButton from "./PlayButton";
 
 const NavBar = () => {
     return (
         <NavLayout>
-            <NavItem href="/" />
+            <RiotLogo />
             <Separator />
-            <NavItem href="/">
-                <ValorantLogo/>
-            </NavItem>
+            <ValorantLogo href="/" />
             <Dropdown title="ข้อมูลเกม">
                 <Li href="/agents" title="เอเจนท์" />
                 <Li href="/maps" title="แผนที่" />
@@ -32,6 +32,8 @@ const NavBar = () => {
                 <ExternalLi title="INSTAGRAM" />
             </Dropdown>
             <External title="อีสปอร์ต" />
+            <LangButton />
+            <PlayButton>เล่นเลย</PlayButton>
         </NavLayout>
     )
 }
