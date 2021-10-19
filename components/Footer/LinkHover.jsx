@@ -6,6 +6,7 @@ const Wrapper = styled.a`
     &:hover {
         color: white;
     }
+    font-weight: 700;
 `
 
 const ButtonWrapper = ({ children }) => {

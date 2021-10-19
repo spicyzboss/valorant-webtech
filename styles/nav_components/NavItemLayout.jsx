@@ -7,7 +7,7 @@ export const NavItemLayout = styled.div`
     color: white;
     line-height: 80px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     margin-left: 4px;
     margin-right: 4px;
     cursor: pointer;

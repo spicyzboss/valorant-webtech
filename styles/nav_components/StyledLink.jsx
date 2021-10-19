@@ -7,7 +7,7 @@ export const StyledLink = styled.a`
     color: white;
     line-height: 80px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     margin: 0 .85em;
     &:hover {
         border-bottom: 2px rgb(255, 70, 85) solid;

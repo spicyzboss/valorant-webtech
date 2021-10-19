@@ -3,11 +3,12 @@ import styled from "styled-components";
 const GamesBar = styled.div`
     position: fixed;
     left: 0;
-    height: 385px;
+    height: 370px;
     width: 100%;
     background-color: white;
     z-index: 10000;
     opacity: 1;
+    padding: 24px 40px;
 `
 
 const DimmedBackground = styled.div`
@@ -29,7 +30,7 @@ const GamesBarWrapper = styled.div`
     margin-top: 80px;
     width: 100vw;
     height: 100vh;
-    display: none;
+    display: ${props => props.isOpen ? "block" : "none"};
 `
 
 const StyledTriangleUp = styled.svg`
@@ -40,6 +41,13 @@ const StyledTriangleUp = styled.svg`
     left: 38px;
 `
 
+const TitleRiotGames = styled.p`
+    font-family: 'Kanit', sans-serif;
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+`
+
 const TriangleUp = () => {
     return (
         <StyledTriangleUp viewBox="0 0 16 16" fill="#fff">
@@ -48,12 +56,14 @@ const TriangleUp = () => {
     )
 }
 
-export const RiotGamesBar = () => {
+export const RiotGamesBar = ({ isOpen, stateControl}) => {
     return (
-        <GamesBarWrapper>
+        <GamesBarWrapper isOpen={isOpen}>
             <TriangleUp />
-            <GamesBar />
-            <DimmedBackground />
+            <GamesBar>
+                <TitleRiotGames>RIOT GAMES</TitleRiotGames>
+            </GamesBar>
+            <DimmedBackground onClick={() => stateControl(false)} />
         </GamesBarWrapper>
     )
 }

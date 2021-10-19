@@ -3,7 +3,7 @@ import { Head, NavBar, Footer } from "../components";
 
 const Section = styled.section`
     height: 100vh;
-    background-color: white;
+    background-color: wheat;
 `
 
 export default function Home() {

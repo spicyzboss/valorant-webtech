@@ -6,11 +6,38 @@ import { ValorantLogo, RiotLogo } from "../../styles/nav_components";
 import Separator from './NavSeparator'
 import LangButton from "./LangButton";
 import PlayButton from "./PlayButton";
+import { useState } from 'react'
+import { RightNav } from './RightNav'
 
 const NavBar = () => {
+    const [openRiotGameBar, setOpenRiotGameBar] = useState(false)
+    const [openLangSelector, setOpenLangSelector] = useState(false)
+    const [openPlayPopup, setOpenPlayPopup] = useState(false)
+    const handleRiotGameBarClick = e => {
+        e.preventDefault();
+        setOpenRiotGameBar(!openRiotGameBar)
+        setOpenLangSelector(false)
+    }
+    const handleLangClick = e => {
+        e.preventDefault();
+        setOpenLangSelector(!openLangSelector)
+        setOpenRiotGameBar(false)
+    }
+    const handlePlayPopupClick = e => {
+        e.preventDefault();
+        setOpenPlayPopup(!openPlayPopup)
+        setOpenRiotGameBar(false)
+        setOpenLangSelector(false)
+    }
+    const RiotGameBarStateControl = state => {
+        setOpenRiotGameBar(state)
+    }
+    const PlayPopupStateControl = state => {
+        setOpenPlayPopup(state)
+    }
     return (
         <NavLayout>
-            <RiotLogo />
+            <RiotLogo isGameBarOpen={openRiotGameBar} onClick={handleRiotGameBarClick} stateControl={RiotGameBarStateControl} />
             <Separator />
             <ValorantLogo href="/" />
             <Dropdown title="ข้อมูลเกม">
@@ -32,8 +59,10 @@ const NavBar = () => {
                 <ExternalLi title="INSTAGRAM" />
             </Dropdown>
             <External title="อีสปอร์ต" />
-            <LangButton />
-            <PlayButton>เล่นเลย</PlayButton>
+            <RightNav>
+                <LangButton isOpen={openLangSelector} onClick={handleLangClick} />
+                <PlayButton isOpen={openPlayPopup} onClick={handlePlayPopupClick} stateControl={PlayPopupStateControl}>เล่นเลย</PlayButton>
+            </RightNav>
         </NavLayout>
     )
 }
