@@ -118,11 +118,11 @@ export const PlayPopup = ({ isOpen, stateControl }) => {
                     <PopupButtonWrapper>
                         <ButtonWrapper>
                             <ButtonLabel>ฉันยังไม่มีบัญชี Riot</ButtonLabel>
-                            <Button isWhite>สร้างทันที</Button>
+                            <Button isWhite isBordered>สร้างทันที</Button>
                         </ButtonWrapper>
                         <ButtonWrapper>
                             <ButtonLabel>ฉันมีบัญชี Riot แล้ว</ButtonLabel>
-                            <Button>ลงชื่อเข้าใช้</Button>
+                            <Button isBordered>ลงชื่อเข้าใช้</Button>
                         </ButtonWrapper>
                     </PopupButtonWrapper>
                     <ExitButton onClick={() => stateControl(false)} />

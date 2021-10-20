@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledButtonWrapper = styled.button`
-    border: solid #bdbcb7 1px;
+    border: none;
     width: 270px;
     height: 68px;
     background: none;
@@ -21,7 +21,7 @@ const Content = styled.div`
     transition: background ease-in .2s, border .2s;
     &:hover {
         background: #0f1923;
-        outline: solid ${props => props.isWhite ? "#ece8e133" : "#ff465533"} 1px;
+        outline: ${props => props.isBordered ? `solid ${props.isWhite ? "#ece8e144" : "#ff465544"} 1px` : "none"};
         color: white;
     }
     position: relative;
@@ -30,12 +30,9 @@ const Content = styled.div`
     align-items: center;
 `
 
-const Box = styled.div`
+const WhiteBox = styled.div`
     position: absolute;
     background-color: #0f1923;
-`
-
-const WhiteBox = styled(Box)`
     width: 5px;
     height: 5px;
     right: 0;
@@ -46,27 +43,33 @@ const WhiteBox = styled(Box)`
     }
 `
 
-const BlackLeftBox = styled(Box)`
-    width: 10px;
-    height: 10px;
-    top: 29px;
-    left: -5px;
-`
-const BlackRightBox = styled(Box)`
-    width: 10px;
-    height: 10px;
-    top: 29px;
-    right: -5px;
+const ButtonBorder = styled.div`
+    border-left: solid #bdbcb7 1px;
+    border-right: solid #bdbcb7 1px;
+    left: 0;
+    width: 100%;
+    height: 29px;
+    position: absolute;
 `
 
-const Button = ({ children, isWhite }) => (
+const TopBorder = styled(ButtonBorder)`
+    border-top: solid #bdbcb7 1px;
+    top: 0;
+`
+
+const BottomBorder = styled(ButtonBorder)`
+    border-bottom: solid #bdbcb7 1px;
+    bottom: 0;
+`
+
+const Button = ({ children, isWhite, isBordered }) => (
     <StyledButtonWrapper>
-        <BlackLeftBox />
-        <Content isWhite={isWhite}>
+        <TopBorder />
+        <BottomBorder />
+        <Content isWhite={isWhite} isBordered={isBordered}>
             {children}
             <WhiteBox />
         </Content>
-        <BlackRightBox />
     </StyledButtonWrapper>
 )
 
