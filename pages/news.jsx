@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 //import { View, ScrollView } from 'react-native'
 
 //components
-import {Card, BlankCard, NewsCard, TextBG, Container} from '../components/NewsComponents'
+import {Card, BlankCard, NewsCard, TextBG, NewsFrame} from '../components/NewsComponents'
 const TitleUp = keyframes`
     from {
         transform: translateY(30px);
@@ -127,7 +127,7 @@ const Box = styled.div`
     height: 400vh;
     display: block;
 `
-const NewsContainer = styled(Container)`
+const NewsContainer = styled(NewsFrame)`
     border-left: none;
     width: 80%;
     .news-card:nth-child(even){
@@ -176,8 +176,6 @@ const News = () => {
             <Head title="ข่าวสาร VALORANT: อัปเดต วิดีโอ และบันทึกแพตช์ล่าสุด" />
             <NavBar />
             <style>{ NewsCss }</style>
-            <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;600&display=swap" rel="stylesheet"></link>
-            <link href="//db.onlinewebfonts.com/c/0201813274259c3d4f78760d19270bab?family=DINNextLTW04-Medium" rel="stylesheet" type="text/css"/>
             <Box style={{ height: "150vh" }}>
                 <NewsRec>
                     <h2 className={ styles.stroke }>
@@ -185,9 +183,9 @@ const News = () => {
                         <TextBG className={ styles.textBackground2 }>VALORANT</TextBG>
                     </h2>
                 </NewsRec>
-                <Container style={{ height: '100vh' }}>
+                <NewsFrame style={{ height: '100vh' }}>
                     <Title className={ styles.resTitle }>แนะนำข่าวสาร</Title>
-                    <Container id="Recomend" style={{  height: '140vh', left: -1 }}>
+                    <NewsFrame id="Recomend" style={{  height: '140vh', left: -1 }}>
                         <HotNews>
                                 <WrapNews>
                                     <SliderContainer>
@@ -195,7 +193,7 @@ const News = () => {
                                         {
                                             data.HOT_NEWS.map((card, index)=>{
                                                 console.log(index)
-                                            return  <Card key={card.ID} data={card}/>
+                                            return  <Card key={ index } data={card}/>
                                             })
                                         }
                                             <BlankCard style={{ background : "red" }} />
@@ -203,21 +201,21 @@ const News = () => {
                                     </SliderContainer>
                                 </WrapNews>
                         </HotNews>
-                    </Container>
-                </Container>
+                    </NewsFrame>
+                </NewsFrame>
             </Box>
             <Box>
-                <Container style={{ borderLeft: "1px solid black"}}>
+                <NewsFrame style={{ borderLeft: "1px solid black"}}>
                     <NewsContainer>
                         <Title style={{ color: "black", paddingTop: "50vh", textIndent: "0" }}> ข่าวสาร</Title>
                         {
-                            data.NEWS.map((card)=>{
-                                return <NewsCard data={ card }/>
+                            data.NEWS.map((card, index)=>{
+                                return <NewsCard key={index} data={ card }/>
                             })
                         }
 
                     </NewsContainer>
-                </Container>
+                </NewsFrame>
             </Box>
             <Footer />
         </>

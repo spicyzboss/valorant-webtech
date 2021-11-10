@@ -1,0 +1,35 @@
+
+.stroke{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #2a343f;
+  }
+  .sliderNav{
+    -webkit-tap-highlight-color: transparent;
+    list-style-type: none;
+    position: absolute;
+    top: 0;
+    padding: 7.5vw;
+    display: inline-block;
+    
+  }
+  
+  .textBackground1{
+    position: absolute;
+    top: 0;
+    left: 0vw;
+  }
+  .textBackground2{
+    position: absolute;
+    top: 40vh;
+    left: 20vw;
+  }
+  @media (max-width: 1100px){
+    .sliderNav{
+      position: relative;
+      padding-left: 0;
+      margin: 0;
+      display: block;
+    }
+  
+  }
