@@ -135,14 +135,12 @@ const NewsContainer = styled(NewsFrame)`
     }
 `
 const NewsCss = css`
-    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
 
     html,
     body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    
     overflow-x: hidden;
     background-color: antiquewhite;
     }
