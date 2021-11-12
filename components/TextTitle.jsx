@@ -10,10 +10,12 @@ const StyledTitle = styled.p`
   line-height: 1.3;
 `
 
-export default ({ textColor, children }) => {
+const Title = ({ textColor, children }) => {
     return (
         <StyledTitle color={textColor}>
             {children}
         </StyledTitle>
     )
 }
+
+export default Title;
