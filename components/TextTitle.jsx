@@ -8,10 +8,12 @@ const StyledTitle = styled.p`
   margin: auto;
 `
 
-export default ({ textColor, children }) => {
+const Title = ({ textColor, children }) => {
     return (
         <StyledTitle color={textColor}>
-            { children }
+            {children}
         </StyledTitle>
     )
 }
+
+export default Title;
