@@ -25,7 +25,7 @@ const DateWhite = styled.p`
 const BottomSection = styled.section`
     width: 100%;
     padding: 5vh 7.5vw;
-    background-color: wheat;
+    background-color: #ece8e1;
 `
 
 const InputWrapper = styled.div`
@@ -55,29 +55,75 @@ const TableWrapper = styled.div`
 const HeadTable = styled.div`
     display: flex;
     width: 100%;
-    height: 14vh;
+    height: 17vh;
     background-color: black;
 `
 
 const RankHead = styled.div`
-    width: auto;
+    width: 15%;
     padding: 20px 25px;
     height: 100%;
     display: flex;
     justify-content: center;
     position: relative;
+    border: 1px solid #8b978f;
 `
 
 const NameHead = styled.div`
     height: 100%;
-    width: 100%;
-    background-color: green;
+    width: 65%;
+    border: 1px solid #8b978f;
 `
 
 const SeasonHead = styled.div`
     height: 100%;
-    width: 23%;
-    background-color: blue;
+    width: 20%;
+    border: 1px solid #8b978f;
+`
+
+const RowWrapper = styled.ul`
+    list-style: none;
+    padding: 0;
+    margin: 0;
+`
+
+const Row = styled.li`
+    display: flex;
+    height: ${props => props.height};
+    border-bottom: ${props => props.border ? "3px solid rgba(189,188,183,.4);" : "none"};
+    margin-top: .5vh;
+`
+
+const Col = styled.div`
+    display: flex;
+    justify-content: center;
+    background: ${props => props.background ? props.background : "transparent"};
+    align-items: ${props => props.aligny == "bottom" ? "flex-end" : "center"};
+    padding: 1vh 0;
+`
+
+const Col1 = styled(Col)`
+    width: 15%;
+`
+
+const Col2 = styled(Col)`
+    width: 12.5%;
+    padding: ${props => props.padding ? props.padding : "1vh 4vh"};
+    font-size: ${props => props.title ? "1.5em" : "1em"};
+`
+
+const Col3 = styled(Col)`
+    width: 52.5%;
+    justify-content: flex-start;
+    padding-left: 5%;
+`
+
+const Col4 = styled(Col)`
+    width: 20%;
+`
+
+const GreenText = styled.span`
+    color: #39b54a;
 `
 
 const Leaderboards = () => {
@@ -106,6 +152,95 @@ const Leaderboards = () => {
                         <NameHead></NameHead>
                         <SeasonHead></SeasonHead>
                     </HeadTable>
+                    <RowWrapper>
+                        <Row height="7vh">
+                            <Col1 aligny="bottom" nobackground>แรงค์</Col1>
+                            <Col2 aligny="bottom" nobackground padding="1vh 0"><GreenText>เรตติ้ง</GreenText></Col2>
+                            <Col3 nobackground></Col3>
+                            <Col4 aligny="bottom" nobackground>กำลังดำเนินการ</Col4>
+                        </Row>
+                        <Row height="19vh" border>
+                            <Col1 background="#e3dfd9">1</Col1>
+                            <Col2 background="#dbd9d2" title padding="3vh 2vh">
+                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                911
+                            </Col2>
+                            <Col3 background="rgba(219,217,210,.8);">PRX Jinggg#Jing</Col3>
+                            <Col4 background="#e3dfd9">46 เกมที่ชนะ</Col4>
+                        </Row>
+                        <Row height="12vh" border>
+                            <Col1 background="#e3dfd9">1</Col1>
+                            <Col2 background="#dbd9d2">
+                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                911
+                            </Col2>
+                            <Col3 background="rgba(219,217,210,.8);">PRX Jinggg#Jing</Col3>
+                            <Col4 background="#e3dfd9">46 เกมที่ชนะ</Col4>
+                        </Row>
+                        <Row height="12vh" border>
+                            <Col1 background="#e3dfd9">1</Col1>
+                            <Col2 background="#dbd9d2">
+                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                911
+                            </Col2>
+                            <Col3 background="rgba(219,217,210,.8);">PRX Jinggg#Jing</Col3>
+                            <Col4 background="#e3dfd9">46 เกมที่ชนะ</Col4>
+                        </Row>
+                        <Row height="12vh" border>
+                            <Col1 background="#e3dfd9">1</Col1>
+                            <Col2 background="#dbd9d2">
+                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                911
+                            </Col2>
+                            <Col3 background="rgba(219,217,210,.8);">PRX Jinggg#Jing</Col3>
+                            <Col4 background="#e3dfd9">46 เกมที่ชนะ</Col4>
+                        </Row>
+                        <Row height="12vh" border>
+                            <Col1 background="#e3dfd9">1</Col1>
+                            <Col2 background="#dbd9d2">
+                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                911
+                            </Col2>
+                            <Col3 background="rgba(219,217,210,.8);">PRX Jinggg#Jing</Col3>
+                            <Col4 background="#e3dfd9">46 เกมที่ชนะ</Col4>
+                        </Row>
+                        <Row height="12vh" border>
+                            <Col1 background="#e3dfd9">1</Col1>
+                            <Col2 background="#dbd9d2">
+                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                911
+                            </Col2>
+                            <Col3 background="rgba(219,217,210,.8);">PRX Jinggg#Jing</Col3>
+                            <Col4 background="#e3dfd9">46 เกมที่ชนะ</Col4>
+                        </Row>
+                        <Row height="12vh" border>
+                            <Col1 background="#e3dfd9">1</Col1>
+                            <Col2 background="#dbd9d2">
+                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                911
+                            </Col2>
+                            <Col3 background="rgba(219,217,210,.8);">PRX Jinggg#Jing</Col3>
+                            <Col4 background="#e3dfd9">46 เกมที่ชนะ</Col4>
+                        </Row>
+                        <Row height="12vh" border>
+                            <Col1 background="#e3dfd9">1</Col1>
+                            <Col2 background="#dbd9d2">
+                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                911
+                            </Col2>
+                            <Col3 background="rgba(219,217,210,.8);">PRX Jinggg#Jing</Col3>
+                            <Col4 background="#e3dfd9">46 เกมที่ชนะ</Col4>
+                        </Row>
+                        <Row height="12vh" border>
+                            <Col1 background="#e3dfd9">1</Col1>
+                            <Col2 background="#dbd9d2">
+                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                911
+                            </Col2>
+                            <Col3 background="rgba(219,217,210,.8);">PRX Jinggg#Jing</Col3>
+                            <Col4 background="#e3dfd9">46 เกมที่ชนะ</Col4>
+                        </Row>
+                    </RowWrapper>
                 </TableWrapper>
             </BottomSection>
             <Footer />
