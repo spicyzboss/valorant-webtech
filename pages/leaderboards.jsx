@@ -13,7 +13,8 @@ const TopSection = styled.section`
 `
 
 const ParallaxBg = styled.div`
-    background: url('/img/leaderboards-hero-banner.jpeg');
+    background: url('/img/leaderboards-hero-banner.jpeg') no-repeat;
+    background-size: cover;
     position: absolute;
     top: 0;
     width: 100%;
