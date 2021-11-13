@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Image from 'next/image';
 
 const GamesBar = styled.div`
     position: fixed;
@@ -56,12 +57,43 @@ const TriangleUp = () => {
     )
 }
 
+const RiotGamesWrapper = styled.div`
+    height: 80%;
+    margin-top: 20px;
+    display: flex;
+    column-gap: 10px;
+    position: relative;
+    background-color: rebeccapurple;
+`
+
+const ContentWrapper = styled.div`
+    width: 25%;
+    background-color: red;
+    position: relative;
+`
+
+const Content = styled.p`
+    font-family: 'Bai jamjuree', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+`
+
+const Img = styled(Image)`
+    border-radius: 5px;
+`
+
 export const RiotGamesBar = ({ isOpen, stateControl}) => {
     return (
         <GamesBarWrapper isOpen={isOpen}>
             <TriangleUp />
             <GamesBar>
                 <TitleRiotGames>RIOT GAMES</TitleRiotGames>
+                <RiotGamesWrapper>
+                    <ContentWrapper>
+                        <Img src="/img/nav_1.jpeg" alt="nav_1" layout="fill" objectFit="contain" />
+                        <Content>ต่อสู้เคียงข้างองครักษ์แห่งแสงในอีเวนต์ที่ยิ่งใหญ่ที่สุดของเรา</Content>
+                    </ContentWrapper>
+                </RiotGamesWrapper>
             </GamesBar>
             <DimmedBackground onClick={() => stateControl(false)} />
         </GamesBarWrapper>
