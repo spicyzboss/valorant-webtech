@@ -37,7 +37,7 @@ const DateWhite = styled.p`
 
 const BottomSection = styled.section`
     width: 100%;
-    padding: 5vh 7.5vw;
+    padding: 5vh 7.5vw 7.5vw 7.5vw;
     background-color: #ece8e1;
 `
 
