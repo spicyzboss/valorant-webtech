@@ -435,10 +435,10 @@ const Leaderboards = () => {
                     </HeadTable>
                     <RowWrapper>
                         <Row height="6vh">
-                            <Col1 fontSize=".75rem" aligny="bottom" nobackground>แรงค์</Col1>
+                            <Col1 fontSize=".75rem" aligny="bottom" nobackground><GreyText>แรงค์</GreyText></Col1>
                             <Col2 fontSize=".75rem" aligny="bottom" nobackground padding="1vh 0"><GreenText>เรตติ้ง</GreenText></Col2>
                             <Col3 fontSize=".75rem" nobackground></Col3>
-                            <Col4 fontSize=".75rem" aligny="bottom" nobackground>กำลังดำเนินการ</Col4>
+                            <Col4 fontSize=".75rem" aligny="bottom" nobackground><GreyText>กำลังดำเนินการ</GreyText></Col4>
                         </Row>
                         <Row height="17vh" border>
                             <Col1 background="#e3dfd9">
@@ -534,7 +534,7 @@ const Leaderboards = () => {
                     </div>
                     <ButtonRightSection>
                         <IconButton inactive>
-                            <PreviousButton inactive flipx/>
+                            <PreviousButton inactive flipx />
                         </IconButton>
                         <IconButton inactive>
                             <NextButton flipx inactive />
