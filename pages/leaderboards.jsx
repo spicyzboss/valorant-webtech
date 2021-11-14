@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Footer, Head, NavBar, Title } from '../components'
-import Image from 'next/image'
 import { useState } from 'react';
 
 const TopSection = styled.section`
@@ -12,8 +11,15 @@ const TopSection = styled.section`
     justify-content: center;
 `
 
+const TitleRadiant = styled.img`
+    padding: 0 1vw;
+    object-fit: contain;
+`
+
+const Image = styled.img``
+
 const ParallaxBg = styled.div`
-    background: url('/img/leaderboards-hero-banner.jpeg') no-repeat;
+    background: url('/project/g41playvalorant/img/leaderboards-hero-banner.jpeg') no-repeat;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -78,7 +84,7 @@ const StyledSearchButton = styled.button`
 const SearchButton = () => (
     <StyledSearchButton>
         <svg width="24" height="24" fill="#0F1923">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M24 21l-5.6-5.6A10.058 10.058 0 0020 10a10 10 0 10-10 10 10.058 10.058 0 005.4-1.6L21 24l3-3zM4 10a6 6 0 116 6 5.89 5.89 0 01-6-6z" />
+            <path fillRule="evenodd" clipRule="evenodd" d="M24 21l-5.6-5.6A10.058 10.058 0 0020 10a10 10 0 10-10 10 10.058 10.058 0 005.4-1.6L21 24l3-3zM4 10a6 6 0 116 6 5.89 5.89 0 01-6-6z" />
         </svg>
     </StyledSearchButton>
 )
@@ -382,7 +388,7 @@ const Leaderboards = () => {
                 <TableWrapper>
                     <HeadTable>
                         <RankHead>
-                            <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                            <TitleRadiant src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                         </RankHead>
                         <NameHead onClick={() => setShowRankDropdown(!showRankDropdown)}>
                             <ListItemWrapper>
@@ -393,25 +399,25 @@ const Leaderboards = () => {
                             <DropdownWrapper show={showRankDropdown}>
                                 <DropdownItem>
                                     <DropdownThumbnailWrapper>
-                                        <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                        <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                     </DropdownThumbnailWrapper>
                                     RADIANT
                                 </DropdownItem>
                                 <DropdownItem>
                                     <DropdownThumbnailWrapper>
-                                        <Image src="/img/immortal-badge.png" alt="immortal-badge" width="100%" height="100%" objectFit="contain" />
+                                        <Image src="/project/g41playvalorant/img/immortal-badge.png" alt="immortal-badge" width="100%" height="100%" objectFit="contain" />
                                     </DropdownThumbnailWrapper>
                                     IMMORTAL 3
                                 </DropdownItem>
                                 <DropdownItem>
                                     <DropdownThumbnailWrapper>
-                                        <Image src="/img/immortal-badge.png" alt="immortal-badge" width="100%" height="100%" objectFit="contain" />
+                                        <Image src="/project/g41playvalorant/img/immortal-badge.png" alt="immortal-badge" width="100%" height="100%" objectFit="contain" />
                                     </DropdownThumbnailWrapper>
                                     IMMORTAL 2
                                 </DropdownItem>
                                 <DropdownItem>
                                     <DropdownThumbnailWrapper>
-                                        <Image src="/img/immortal-badge.png" alt="immortal-badge" width="100%" height="100%" objectFit="contain" />
+                                        <Image src="/project/g41playvalorant/img/immortal-badge.png" alt="immortal-badge" width="100%" height="100%" objectFit="contain" />
                                     </DropdownThumbnailWrapper>
                                     IMMORTAL 1
                                 </DropdownItem>
@@ -446,7 +452,7 @@ const Leaderboards = () => {
                                 <StarSvg />
                             </Col1>
                             <Col2 background="#dbd9d2" padding="3vh 2vh">
-                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                 <RatingLarge>911</RatingLarge>
                             </Col2>
                             <Col3 background="rgba(219,217,210,.8);">
@@ -457,7 +463,7 @@ const Leaderboards = () => {
                         <Row height="9vh" border>
                             <Col1 background="#e3dfd9"><NumberSmall>2</NumberSmall></Col1>
                             <Col2 background="#dbd9d2">
-                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                 842
                             </Col2>
                             <Col3 background="rgba(219,217,210,.8);">PRX f0rsakeN<GreyText>#biboo</GreyText></Col3>
@@ -466,7 +472,7 @@ const Leaderboards = () => {
                         <Row height="9vh" border>
                             <Col1 background="#e3dfd9"><NumberSmall>3</NumberSmall></Col1>
                             <Col2 background="#dbd9d2">
-                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                 818
                             </Col2>
                             <Col3 background="rgba(219,217,210,.8);">LVR Deryeon<GreyText>#Ting</GreyText></Col3>
@@ -475,7 +481,7 @@ const Leaderboards = () => {
                         <Row height="9vh" border>
                             <Col1 background="#e3dfd9"><NumberSmall>4</NumberSmall></Col1>
                             <Col2 background="#dbd9d2">
-                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                 739
                             </Col2>
                             <Col3 background="rgba(219,217,210,.8);">Mojer<GreyText>#kndra</GreyText></Col3>
@@ -484,7 +490,7 @@ const Leaderboards = () => {
                         <Row height="9vh" border>
                             <Col1 background="#e3dfd9"><NumberSmall>5</NumberSmall></Col1>
                             <Col2 background="#dbd9d2">
-                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                 711
                             </Col2>
                             <Col3 background="rgba(219,217,210,.8);">vateRr ramos<GreyText>#BTR</GreyText></Col3>
@@ -493,7 +499,7 @@ const Leaderboards = () => {
                         <Row height="9vh" border>
                             <Col1 background="#e3dfd9"><NumberSmall>6</NumberSmall></Col1>
                             <Col2 background="#dbd9d2">
-                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                 710
                             </Col2>
                             <Col3 background="rgba(219,217,210,.8);">FS JohnOlsen<GreyText>#1TAP</GreyText></Col3>
@@ -502,7 +508,7 @@ const Leaderboards = () => {
                         <Row height="9vh" border>
                             <Col1 background="#e3dfd9"><NumberSmall>7</NumberSmall></Col1>
                             <Col2 background="#dbd9d2">
-                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                 709
                             </Col2>
                             <Col3 background="rgba(219,217,210,.8);">LVR juicy<GreyText>#noaim</GreyText></Col3>
@@ -511,7 +517,7 @@ const Leaderboards = () => {
                         <Row height="9vh" border>
                             <Col1 background="#e3dfd9"><NumberSmall>8</NumberSmall></Col1>
                             <Col2 background="#dbd9d2">
-                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                 706
                             </Col2>
                             <Col3 background="rgba(219,217,210,.8);">JUST LOSE BENAF<GreyText>#gnext</GreyText></Col3>
@@ -520,7 +526,7 @@ const Leaderboards = () => {
                         <Row height="9vh" border>
                             <Col1 background="#e3dfd9"><NumberSmall>9</NumberSmall></Col1>
                             <Col2 background="#dbd9d2">
-                                <Image src="/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
                                 696
                             </Col2>
                             <Col3 background="rgba(219,217,210,.8);">Moosey<GreyText>#benaf</GreyText></Col3>

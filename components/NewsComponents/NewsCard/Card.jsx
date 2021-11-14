@@ -86,7 +86,7 @@ const ContentNumber = styled.div`
 `
 
 const Card = ({ data }) => {
-    const pic = `news_content/pic/hot_news/${ data.ID }.jpeg`
+    const pic = `/project/g41playvalorant/news_content/pic/hot_news/${ data.ID }.jpeg`
     return (
         <>
         <BlankCard>

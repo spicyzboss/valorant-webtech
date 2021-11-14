@@ -44,7 +44,7 @@ const Card = styled.a`
 `
 
 const NewsCard = ({ data }) => {
-    const pic = `news_content/pic/news/N_${ data.ID }.jpeg`;
+    const pic = `/project/g41playvalorant/news_content/pic/news/N_${ data.ID }.jpeg`;
     return(
         <>
             <Card href={ data.LINK } target="_BLANK_" className="news-card">
@@ -57,7 +57,7 @@ const NewsCard = ({ data }) => {
                 </Content>
             </Card>
         </>
-        
+
     )
 }
 export default NewsCard;

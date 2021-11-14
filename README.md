@@ -45,4 +45,4 @@ docker build . -t web-valorant
 docker run --name web-valorant -d -p 3000:3000 web-valorant
 ```
 
-หลังจากนั้นลองเข้าไปที่ <http://localhost:3000>
+หลังจากนั้นลองเข้าไปที่ <http://localhost:3000/project/g41playvalorant/>

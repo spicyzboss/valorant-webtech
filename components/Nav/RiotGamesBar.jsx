@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from 'next/image';
 
 const GamesBar = styled.div`
     position: fixed;
@@ -78,10 +77,6 @@ const Content = styled.p`
     font-weight: 500;
 `
 
-const Img = styled(Image)`
-    border-radius: 5px;
-`
-
 export const RiotGamesBar = ({ isOpen, stateControl}) => {
     return (
         <GamesBarWrapper isOpen={isOpen}>
@@ -90,7 +85,6 @@ export const RiotGamesBar = ({ isOpen, stateControl}) => {
                 <TitleRiotGames>RIOT GAMES</TitleRiotGames>
                 <RiotGamesWrapper>
                     <ContentWrapper>
-                        <Img src="/img/nav_1.jpeg" alt="nav_1" layout="fill" objectFit="contain" />
                         <Content>ต่อสู้เคียงข้างองครักษ์แห่งแสงในอีเวนต์ที่ยิ่งใหญ่ที่สุดของเรา</Content>
                     </ContentWrapper>
                 </RiotGamesWrapper>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Head, NavBar, Footer, Button } from "../components";
+import { Head, NavBar, Footer, Button, Title } from "../components";
 
 const Section = styled.section`
     height: 100vh;
@@ -24,6 +24,7 @@ export default function Home() {
                     <Button>Test</Button>
                     <Button>Test</Button>
                     <Button>Test</Button>
+                    <Title textColor="#fe0000" fontSize="10rem">เอเจนท์ของคุณ</Title>
                 </Section>
                 <Footer />
             </>

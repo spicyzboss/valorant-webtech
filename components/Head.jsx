@@ -6,7 +6,7 @@ const Head = ({ title }) => {
             <meta charSet="UTF-8" />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <link rel="shortcut icon" href="favicon.svg" type="image/x-svg" />
+            <link rel="shortcut icon" href="/project/g41playvalorant/favicon.svg" type="image/x-svg" />
             <title>{title}</title>
         </NextHead>
     )
