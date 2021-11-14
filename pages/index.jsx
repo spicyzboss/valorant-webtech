@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Head, NavBar, Footer, Button, Title } from "../components";
 
 const Section = styled.section`
-    height: 100vh;
+    /* height: 100vh; */
     background-color: wheat;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ export default function Home() {
                     <Button>Test</Button>
                     <Button>Test</Button>
                     <Button>Test</Button>
-                    <Title textColor="#fe0000" fontSize="10rem">เอเจนท์ของคุณ</Title>
+                    <Title textColor="#fe0000" fontSize="8rem">เอเจนท์ของคุณ</Title>
                 </Section>
                 <Footer />
             </>
