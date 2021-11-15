@@ -99,7 +99,7 @@ const MediaCategory = () => {
                 <div className="GalContainer">
                     {
                         data.map(( image, index )=>{
-                            if(image.type === type){
+                            if(image.type === type || type == "all"){
                                 let imgSize = size[Math.floor(Math.random()*3)]
                                 num++;
                                 return (<div key={ index } className="imgGallery" style={{ background: `url(${image.path})`, width: `${imgSize[0]}`, height: `${imgSize[1]}`}} ></div>)

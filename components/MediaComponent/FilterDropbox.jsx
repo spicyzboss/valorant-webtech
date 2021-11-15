@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 const Text = styled.div`
     text-align: center;
     color: black;
-    background: antiquewhite;
+    background: #ece8e1;
     width: 10vw;
     height: 10vh;
     padding-top: 3vh;
@@ -61,6 +61,9 @@ const Box = styled.div`
 `
 const Drop = styled.div`
     background: red;
+    height: 303%;
+    width: 101%;
+    border: 1px solid #8b978f;
 `
 
 const FilterDropbox = () => {
