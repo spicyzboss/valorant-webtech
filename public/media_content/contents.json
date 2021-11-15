@@ -1,0 +1,54 @@
+{
+ "wallpaper": [
+     {
+        "path": "../../media_content/pic/wallpaper/W_01.jpeg",
+        "type": "arsenals"
+     },
+     {
+        "path": "../../media_content/pic/wallpaper/W_02.jpeg",
+        "type": "maps"
+     },
+     {
+        "path": "../../media_content/pic/wallpaper/W_03.jpeg",
+        "type": "agents"
+     },
+     {
+        "path": "../../media_content/pic/wallpaper/W_04.jpeg",
+        "type": "arsenals"
+     }
+    ],
+    "video": [],
+    "screenshot": [],
+    "artwork":[
+        {
+            "path": "../../media_content/pic/artwork/A_01.jpeg",
+            "type": "agents"
+        },
+        {
+            "path": "../../media_content/pic/artwork/A_02.jpeg",
+            "type": "arsenals"
+        },
+        {
+            "path": "../../media_content/pic/artwork/A_03.jpeg",
+            "type": "agents"
+        },
+        {
+            "path": "../../media_content/pic/artwork/A_04.jpeg",
+            "type": "agents"
+        }
+    ],
+    "logo": [
+        {
+            "path": "../../media_content/pic/logo/L_01.jpeg",
+            "type": "NO RELATE"
+        }
+    ],
+    "content_creator": [
+        {
+            "path": "../../media_content/pic/content_creator/C_01.jpeg",
+            "type": "NO RELATE"
+        }
+        
+    ]
+}
+
