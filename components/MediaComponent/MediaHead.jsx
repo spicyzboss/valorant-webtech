@@ -19,7 +19,7 @@ position: relative;
     width: 90%;
     position: absolute;
     height: 7.5vh;
-    background: antiquewhite;
+    background: #ece8e1;
     bottom: 0;
     transform: translateX(-10%) skewX(50deg);
 }
@@ -77,7 +77,7 @@ transform-origin: bottom;
 &:after{
     content: "";
     position: absolute;
-    background: antiquewhite;
+    background: #ece8e1;
     width: 6vw;
     height: 10vh;
     bottom: 0;
