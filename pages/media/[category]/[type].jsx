@@ -87,7 +87,6 @@ const MediaCategory = () => {
 
     }
     let num = 0;
-    console.log(type);
     return (
         <>
             <Head title="VALORANT: เกมยิงปืนจาก Riot Games ในรูปแบบ 5v5 ที่ขับเคลื่อนโดยตัวละครนักยิงปืนผู้มากความสามารถ" />

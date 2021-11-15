@@ -4,20 +4,51 @@ import React from "react";
 import Link from 'next/link'
 import { useRouter } from "next/router";
 
-const Text = styled.option`
+const Text = styled.div`
     text-align: center;
-    position: absolute;
     color: black;
-    font-weight: small;
-    display: flex;
-    white-space: pre;
-    min-height: 20px;
-    padding: 0px 2px 1px;
     background: antiquewhite;
+    width: 10vw;
+    height: 10vh;
+    padding-top: 3vh;
+    user-select: none;
+    &:hover{
+        background: black;
+        color: white;
+    }
+`
+const CurrentText = styled(Text)`
+vertical-align: middle;
+position: relative;
+
+&:hover{
+    background: none;
+    color: black;
+}
+&:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    border: 1px solid #8b978f;
+    border-bottom: none;
+    top: 0;
+    left: 0;
+}
+&:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    border: 1px solid #8b978f;
+    border-top: none;
+    bottom: 0;
+    left: 0;
+}
 `
 
 
-const Box = styled.select`
+const Box = styled.div`
     width: 10vw;
     height: 10vh;
     position: absolute;
@@ -25,18 +56,22 @@ const Box = styled.select`
     background: none;
     top: 0;
     cursor: pointer;
-    border: 1px solid #8b978f;
+    transition: 1s;
 
+`
+const Drop = styled.div`
+    background: red;
 `
 
 const FilterDropbox = () => {
     const router = useRouter();
     let { category, type } = router.query;
+    const [state, setState] = useState(false);
     if(typeof type === 'undefined'){
         type = `all`
     }
     const onSelectChange = (e) => {
-        let locale = e.target.value;
+        let locale = e.target.dataset.value;
         if(typeof category === 'undefined'){
             category = `all`;
             locale = `media/${ category }/${ locale }`
@@ -57,6 +92,9 @@ const FilterDropbox = () => {
                 scroll: false
             })
         }
+        e.target.parentElement.style.display = "none";
+        setState(false)
+
     }
     let convert = {
         "all": "ทั้งหมด",
@@ -68,22 +106,26 @@ const FilterDropbox = () => {
      {"type" : "เอเจนท์", "value" : `agents`},
      {"type" : "แผนที่", "value" : `maps`},
      {"type" : "คลังแสง", "value" : `arsenals`}]
-
+    const openDropbox = (e) => {
+        e.target.nextElementSibling.style.display = state?"none":"block";
+        setState(state?false:true);
+    }
     return (
         <>
-            <Box onChange={onSelectChange}>
-                <Text value={`/${type}`}>{ convert[type] }</Text>
+            <Box>
+                <CurrentText onClick={ openDropbox } style={{ zIndex: 1}} value={`/${type}`}>{ convert[type] }</CurrentText>
+                <Drop style={{ display: "none"}}>
                 {
                     itemList.map((item, index)=>{
                         if(item.type != convert[type]){
-                            return <Text key={ index } value={item.value}>{item.type}</Text>
+                            return <Text key={ index } onClick={ onSelectChange } data-value={item.value}>{item.type}</Text>
                         }
                     })
                 }
+                </Drop>
                 
             </Box>
         </>
-
     )
 }
 export default FilterDropbox;
