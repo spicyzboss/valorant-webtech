@@ -77,7 +77,7 @@ const FilterDropbox = () => {
         let locale = e.target.dataset.value;
         if(typeof category === 'undefined'){
             category = `all`;
-            locale = `media/${ category }/${ locale }`
+            locale = `all/${ locale }/`
             router.push(locale)
         }
 

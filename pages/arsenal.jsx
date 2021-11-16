@@ -19,9 +19,6 @@ const Container = styled.div`
 `
 
 const ItemWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     padding: 3vw;
     width: 100%;
     height: auto;
@@ -29,9 +26,36 @@ const ItemWrapper = styled.div`
     cursor: pointer;
     position: relative;
     transition: background-color .3s ease-in-out;
+    overflow: hidden;
+`
 
-    &:hover {
-        background-color: #ff4655;
+const HoverWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+        content: "";
+        top: 0;
+        position: absolute;
+        width: 140%;
+        height: 100%;
+        background: #ff4655;
+        transform: translateX(-120%) skewX(-10deg);
+        transition: all .1s ease-in-out;
+        mix-blend-mode: multiply;
+        z-index: 0;
+    }
+
+    ${ItemWrapper}:hover &::before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 100%;
+        background: #ff4655;
+        transform: translateX(-15%) skewX(-10deg);
     }
 `
 
@@ -258,14 +282,16 @@ const Arsenal = () => {
                             if (item.type == filter || filter == "อาวุธทั้งหมด") {
                                 return (
                                     <ItemWrapper key={index}>
-                                        <ItemName>{item.name}.</ItemName>
-                                        <GunImage src={item.pict} alt={item.name}/>
-                                        <ItemDesc>{item.desc}</ItemDesc>
-                                        <ItemHoverWrapper>
-                                            {item.hover.map((item, index) => {
-                                                return <ItemHover key={index}>{item}</ItemHover>
-                                            })}
-                                        </ItemHoverWrapper>
+                                        <HoverWrapper>
+                                            <ItemName>{item.name}.</ItemName>
+                                            <GunImage src={item.pict} alt={item.name}/>
+                                            <ItemDesc>{item.desc}</ItemDesc>
+                                            <ItemHoverWrapper>
+                                                {item.hover.map((item, index) => {
+                                                    return <ItemHover key={index}>{item}</ItemHover>
+                                                })}
+                                            </ItemHoverWrapper>
+                                        </HoverWrapper>
                                     </ItemWrapper>
                                 )
                             }

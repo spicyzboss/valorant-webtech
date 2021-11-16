@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Footer, Head, NavBar, Title } from '../components'
 import { useState } from 'react';
+import Data from '../assets/leaderboards.json'
 
 const TopSection = styled.section`
     height: 68vh;
@@ -16,7 +17,10 @@ const TitleRadiant = styled.img`
     object-fit: contain;
 `
 
-const Image = styled.img``
+const Image = styled.img`
+    width: 50%;
+    object-fit: contain;
+`
 
 const ParallaxBg = styled.div`
     background: url('/project/g41playvalorant/img/leaderboards-hero-banner.jpeg') no-repeat;
@@ -234,6 +238,7 @@ const DropdownWrapper = styled.ul`
     padding: 0;
     list-style: none;
     border: 1px solid  #bdbcb7;
+    z-index: ${props => props.show ? "10" : "-1"};
     opacity: ${props => props.show ? "100" : "0"};
     transition: opacity .2s ease-in-out;
 `
@@ -324,9 +329,9 @@ const NextButton = ({ inactive, flipx }) => (
     </StyledSVG>
 )
 
-const IconButton = ({ children, inactive }) => {
+const IconButton = ({ children, inactive, onClick }) => {
     return (
-        <StyledIconButton inactive={inactive}>
+        <StyledIconButton inactive={inactive} onClick={onClick}>
             {children}
         </StyledIconButton>
     )
@@ -363,6 +368,15 @@ const GreyText = styled.span`
 const Leaderboards = () => {
     const [showRankDropdown, setShowRankDropdown] = useState(false);
     const [showSeasonDropdown, setShowSeasonDropdown] = useState(false);
+    const [page, setPage] = useState({ page: 0, data: Data });
+
+    const HandleNext = () => {
+        setPage({ page: page.page + 1, data: Data });
+    }
+
+    const HandlePrev = () => {
+        setPage({ page: Math.max(0, page.page - 1), data: Data });
+    }
 
     return (
         <>
@@ -430,12 +444,12 @@ const Leaderboards = () => {
                             </ListItemWrapper>
                             <DownIcon show={showSeasonDropdown} />
                             <DropdownWrapper show={showSeasonDropdown}>
-                                <DropdownItem>EPISODE 2 //// ACT 1</DropdownItem>
-                                <DropdownItem>EPISODE 2 //// ACT 2</DropdownItem>
-                                <DropdownItem>EPISODE 2 //// ACT 3</DropdownItem>
-                                <DropdownItem>EPISODE 3 //// ACT 1</DropdownItem>
-                                <DropdownItem>EPISODE 3 //// ACT 2</DropdownItem>
-                                <DropdownItem>EPISODE 3 //// ACT 3</DropdownItem>
+                                <DropdownItem>EPISODE 2 <GreyText>//// ACT 1</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 2 <GreyText>//// ACT 2</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 2 <GreyText>//// ACT 3</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 3 <GreyText>//// ACT 1</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 3 <GreyText>//// ACT 2</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 3 <GreyText>//// ACT 3</GreyText></DropdownItem>
                             </DropdownWrapper>
                         </SeasonHead>
                     </HeadTable>
@@ -446,92 +460,28 @@ const Leaderboards = () => {
                             <Col3 fontSize=".75rem" nobackground></Col3>
                             <Col4 fontSize=".75rem" aligny="bottom" nobackground><GreyText>กำลังดำเนินการ</GreyText></Col4>
                         </Row>
-                        <Row height="17vh" border>
-                            <Col1 background="#e3dfd9">
-                                <NumberLarge>1</NumberLarge>
-                                <StarSvg />
-                            </Col1>
-                            <Col2 background="#dbd9d2" padding="3vh 2vh">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                <RatingLarge>911</RatingLarge>
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">
-                                <NameLarge>PRX Jinggg<GreyText>#Jing</GreyText></NameLarge>
-                            </Col3>
-                            <Col4 background="#e3dfd9">46 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>2</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                842
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">PRX f0rsakeN<GreyText>#biboo</GreyText></Col3>
-                            <Col4 background="#e3dfd9">66 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>3</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                818
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">LVR Deryeon<GreyText>#Ting</GreyText></Col3>
-                            <Col4 background="#e3dfd9">61 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>4</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                739
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">Mojer<GreyText>#kndra</GreyText></Col3>
-                            <Col4 background="#e3dfd9">56 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>5</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                711
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">vateRr ramos<GreyText>#BTR</GreyText></Col3>
-                            <Col4 background="#e3dfd9">51 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>6</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                710
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">FS JohnOlsen<GreyText>#1TAP</GreyText></Col3>
-                            <Col4 background="#e3dfd9">41 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>7</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                709
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">LVR juicy<GreyText>#noaim</GreyText></Col3>
-                            <Col4 background="#e3dfd9">37 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>8</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                706
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">JUST LOSE BENAF<GreyText>#gnext</GreyText></Col3>
-                            <Col4 background="#e3dfd9">45 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>9</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                696
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">Moosey<GreyText>#benaf</GreyText></Col3>
-                            <Col4 background="#e3dfd9">52 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
+                        {
+                            page.data.map((player, index) => {
+                                if (index >= page.page * 10 && index < (page.page + 1) * 10 - 1) {
+                                    return (
+                                        <Row height={!index ? `17vh` : `9vh`} border key={index}>
+                                            <Col1 background="#e3dfd9">
+                                                {!index ? <NumberLarge>{player.rank}</NumberLarge> : <NumberSmall>{player.rank}</NumberSmall>}
+                                                {!index ? <StarSvg /> : null}
+                                            </Col1>
+                                            <Col2 background="#dbd9d2" padding={!index ? "3vh 2vh" : null}>
+                                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                                {!index ? <RatingLarge>{player.rating}</RatingLarge> : player.rating}
+                                            </Col2>
+                                            <Col3 background="rgba(219,217,210,.8);">
+                                                {!index ? (<NameLarge>{player.name}<GreyText>{player.tag}</GreyText></NameLarge>) : (<p>{player.name}<GreyText>{player.tag}</GreyText></p>)}
+                                            </Col3>
+                                            <Col4 background="#e3dfd9">{player.game} <GreyText>เกมที่ชนะ</GreyText></Col4>
+                                        </Row>
+                                    )
+                                }
+                            })
+                        }
                     </RowWrapper>
                 </TableWrapper>
                 <ButtonWrapper>
@@ -539,19 +489,19 @@ const Leaderboards = () => {
                         <ViewRankButton>เข้าสู่ระบบเพื่อดูแรงค์</ViewRankButton>
                     </div>
                     <ButtonRightSection>
-                        <IconButton inactive>
-                            <PreviousButton inactive flipx />
+                        <IconButton inactive={!(page.page > 0)} onClick={HandlePrev}>
+                            <PreviousButton flipx inactive={!(page.page > 0)} />
                         </IconButton>
-                        <IconButton inactive>
-                            <NextButton flipx inactive />
+                        <IconButton inactive={!(page.page > 0)} onClick={HandlePrev}>
+                            <NextButton flipx inactive={!(page.page > 0)} />
                         </IconButton>
                         <PageNumberWrapper>
-                            หน้า 1/2022
+                            หน้า {page.page+1}/2022
                         </PageNumberWrapper>
-                        <IconButton>
+                        <IconButton onClick={HandleNext}>
                             <NextButton />
                         </IconButton>
-                        <IconButton>
+                        <IconButton onClick={HandleNext}>
                             <PreviousButton />
                         </IconButton>
                     </ButtonRightSection>

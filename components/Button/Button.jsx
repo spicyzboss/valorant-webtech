@@ -17,17 +17,13 @@ const Content = styled.div`
     width: 100%;
     font-family: 'Bai Jamjuree', sans-serif;
     font-weight: 500;
+    overflow: hidden;
     color: ${props => props.isWhite ? "#0f1923" : "white"};
-    transition: background ease-in .2s, border .2s;
+    transition: color .2s ease-in-out;
     &:hover {
-        background: #0f1923;
         outline: ${props => props.isBordered ? `solid ${props.isWhite ? "#ece8e144" : "#ff465544"} 1px` : "none"};
         color: white;
     }
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 `
 
 const WhiteBox = styled.div`
@@ -38,6 +34,7 @@ const WhiteBox = styled.div`
     right: 0;
     bottom: 0;
     transition: background ease-in .3s;
+    z-index: 11;
     ${Content}:hover & {
         background-color: white;
     }
@@ -62,13 +59,43 @@ const BottomBorder = styled(ButtonBorder)`
     bottom: 0;
 `
 
+const HoverContent = styled.div`
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: "";
+        background: #0f1923;
+        width: 120%;
+        height: 100%;
+        position: absolute;
+        transition: all ease-in .25s;
+        transform: translateX(-100%) skewX(-20deg);
+        z-index: 1;
+    }
+
+    ${Content}:hover &::before {
+        transform: translateX(0) skewX(-20deg);
+    }
+`
+
+const Text = styled.p`
+    z-index: 10;
+`
+
 const Button = ({ children, isWhite, isBordered }) => (
     <StyledButtonWrapper>
         <TopBorder />
         <BottomBorder />
         <Content isWhite={isWhite} isBordered={isBordered}>
-            {children}
-            <WhiteBox />
+            <HoverContent>
+                <Text>{children}</Text>
+                <WhiteBox />
+            </HoverContent>
         </Content>
     </StyledButtonWrapper>
 )
