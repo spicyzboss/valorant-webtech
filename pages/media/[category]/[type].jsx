@@ -8,7 +8,7 @@ const Box = styled.div`
     position: relative;
     width: 100vw;
     display: block;
-    background: antiquewhite;
+    background: #ece8e1;
     box-sizing: border-box;
 `
 const Media_Css = css`
@@ -17,7 +17,7 @@ const Media_Css = css`
         padding: 0;
         margin: 0;
         overflow-x: hidden;
-        background-color: antiquewhite;
+        background-color: #ece8e1;
     }
 
     .condition {
@@ -87,7 +87,6 @@ const MediaCategory = () => {
 
     }
     let num = 0;
-    console.log(type);
     return (
         <>
             <Head title="VALORANT: เกมยิงปืนจาก Riot Games ในรูปแบบ 5v5 ที่ขับเคลื่อนโดยตัวละครนักยิงปืนผู้มากความสามารถ" />
@@ -100,7 +99,7 @@ const MediaCategory = () => {
                 <div className="GalContainer">
                     {
                         data.map(( image, index )=>{
-                            if(image.type === type){
+                            if(image.type === type || type == "all"){
                                 let imgSize = size[Math.floor(Math.random()*3)]
                                 num++;
                                 return (<div key={ index } className="imgGallery" style={{ background: `url(${image.path})`, width: `${imgSize[0]}`, height: `${imgSize[1]}`}} ></div>)

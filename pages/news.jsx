@@ -123,10 +123,17 @@ const Box = styled.div`
     display: block;
 `
 const NewsContainer = styled(NewsFrame)`
+    position: absolute;
     border-left: none;
     width: 80%;
+    .saveLine{
+        display: block;
+        position: relative;
+        width: 100%;
+    }
     .news-card:nth-child(even){
-        left: 20%;
+        position: relative;
+        left: 15%;
     }
 `
 const NewsCss = css`
@@ -137,7 +144,7 @@ const NewsCss = css`
     margin: 0;
 
     overflow-x: hidden;
-    background-color: antiquewhite;
+    background-color: #ece8e1;
     }
 
     a {
@@ -192,8 +199,8 @@ const News = () => {
                 </NewsFrame>
             </Box>
             <Box>
-                <NewsFrame style={{ borderLeft: "1px solid black"}}>
-                    <NewsContainer>
+                <NewsFrame style={{ borderLeft: "1px solid black", height: "100%"}}>
+                    <NewsContainer style={{ postion: "absolute", width:"100%", borderLeft: "none", boxSizing: "border-box"}}>
                         <Title style={{ color: "black", paddingTop: "50vh", textIndent: "0" }}> ข่าวสาร</Title>
                         {
                             data.NEWS.map((card, index)=>{

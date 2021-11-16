@@ -8,7 +8,7 @@ const Box = styled.div`
     position: relative;
     width: 100vw;
     display: block;
-    background: antiquewhite;
+    background: #ece8e1;
     box-sizing: border-box;
 `
 const Media_Css = css`
@@ -17,7 +17,7 @@ const Media_Css = css`
         padding: 0;
         margin: 0;
         overflow-x: hidden;
-        background-color: antiquewhite;
+        background-color: #ece8e1;
     }
 
     .condition {

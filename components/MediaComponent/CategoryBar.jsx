@@ -7,27 +7,42 @@ const Bar = styled.ul`
     position: relative;
     display: block;
     }
+    
 `
 const Category = styled.li`
 float: left;
 margin-left: 50px;
 list-style-type: none; 
 height: 5vh;
+color: #8b978f;
+&:hover{
+    color: #ff4655;
+}
 `
 const CategoryBar = () => {
     const router = useRouter();
     const { category } = router.query;
-
+    const items = [{"name": "ทั้งหมด", "value": "all"},
+        {"name": "วอลเปเปอร์", "value": "wallpaper"},
+        {"name": "วิดีโอ", "value": "video"},
+        {"name": "สกรีนช็อต", "value": "screenshot"},
+        {"name": "อาร์ทเวิร์ก", "value": "artwork"},
+        {"name": "โลโก้", "value": "logo"},
+        {"name": "คอนเทนต์ครีเอเตอร์", "value": "content_creator"}
+    ]
     return (
     <>
         <Bar>
-            <Category style={{ color: `${ category == "all"?"black": "#8b978f"}`, borderBottom: `${ category == "all"?"1px solid black": "none"}` }} ><Link href="/media/all" scroll={false}>ทั้งหมด</Link></Category>
-            <Category style={{ color: `${ category == "wallpaper"?"black": "#8b978f"}`, borderBottom: `${ category == "wallpaper"?"1px solid black": "none"}` }} ><Link href="/media/wallpaper" scroll={false}>วอลเปเปอร์</Link></Category>
-            <Category style={{ color: `${ category == "video"?"black": "#8b978f"}`, borderBottom: `${ category == "video"?"1px solid black": "none"}` }} ><Link href="/media/video" scroll={false}>วิดีโอ</Link></Category>
-            <Category style={{ color: `${ category == "screenshot"?"black": "#8b978f"}`, borderBottom: `${ category == "screenshot"?"1px solid black": "none"}` }} ><Link href="/media/screenshot" scroll={false}>สกรีนช็อต</Link></Category>
-            <Category style={{ color: `${ category == "artwork"?"black": "#8b978f"}`, borderBottom: `${ category == "artwork"?"1px solid black": "none"}` }} ><Link href="/media/artwork" scroll={false}>อาร์ทเวิร์ก</Link></Category>
-            <Category style={{ color: `${ category == "logo"?"black": "#8b978f"}`, borderBottom: `${ category == "logo"?"1px solid black": "none"}` }} ><Link href="/media/logo" scroll={false}>โลโก้</Link></Category>
-            <Category style={{ color: `${ category == "content_creator"?"black": "#8b978f"}`, borderBottom: `${ category == "content_creator"?"1px solid black": "none"}` }} ><Link href="/media/content_creator" scroll={false}>คอนเทนต์ครีเอเตอร์</Link></Category>
+            {
+                items.map((item, index)=>{
+                    if(item.value == category){
+                        return <Category key={ index } style={{ color: "black", borderBottom: "1px solid black" }}><Link href={ `/media/${ item.value}` } scroll={false}>{ item.name }</Link></Category>
+                    }
+                    return <Category key={ index }><Link href={ `/media/${ item.value}` } scroll={false}>{ item.name }</Link></Category>
+
+                })
+                
+            }
             <FilterDropbox></FilterDropbox>
         </Bar>
 

@@ -21,7 +21,7 @@ const Media_Css = css`
         padding: 0;
         margin: 0;
         overflow-x: hidden;
-        background-color: antiquewhite;
+        background-color: #ece8e1;
     }
 
     .condition {
