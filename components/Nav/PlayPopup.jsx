@@ -82,7 +82,8 @@ const ExitButtonWrapper = styled.button`
     cursor: pointer;
 `
 
-const ExitButton = ({ onClick }) => {
+
+export const ExitButton = ({ onClick }) => {
     return (
         <ExitButtonWrapper onClick={onClick}>
             <ExitButtonStyle />

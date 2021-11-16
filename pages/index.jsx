@@ -1,5 +1,5 @@
 
-import { Head, NavBar, Footer, Button, Title } from "../components";
+import { Head, NavBar, Footer, Button, Title, ExitButton } from "../components";
 import styled, { css, keyframes } from 'styled-components'
 import {Card, BlankCard, NewsCard, TextBG, NewsFrame} from '../components/NewsComponents'
 import styles from '../styles/News.module.css'
@@ -31,33 +31,33 @@ const Section = styled.section`
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    
+
 `
 
 const Videos = styled.video`
     width:100%;
     z-index:-1;
-    
-    
 
-    
+
+
+
     }
 `
 const Cen = styled.div`
     margin-bottom:50px;
-    
-    
 
-    
+
+
+
     }
 `
 const Cen2 = styled.div`
     position:absolute;
     top:260px;
-    
-    
 
-    
+
+
+
     }
 `
 const Cen3 = styled.div`
@@ -67,18 +67,18 @@ const Cen3 = styled.div`
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-    
-    
 
-    
+
+
+
     }
 `
 const Content = styled.div`
     background-color:#ebe8e1;
-    
-    
 
-    
+
+
+
     }
 `
 const Content03 = styled.div`
@@ -88,7 +88,7 @@ const Content03 = styled.div`
     height:100vh; */}
     display: block;
 
-    
+
     }
 `
 const BackgroundText = styled.div`
@@ -99,12 +99,12 @@ const BackgroundText = styled.div`
     right: 0;
     z-index: 0;
     overflow: hidden;
-  
-    
-    
-    
 
-    
+
+
+
+
+
     }
 `
 const Container = styled.div`
@@ -112,7 +112,7 @@ const Container = styled.div`
     position: relative;
     margin-left:144px;
     margin-top:170px;
-    
+
     // z-index:2000;
 `
 
@@ -127,13 +127,13 @@ const Text01 = styled.div`
 `
 const Content01 = styled.div`
     display:flex;
-    
+
 `
 const Content02 = styled.div`
      background-color:#f84754;
-     width:100vw;
+     width:100%;
      height:auto;
-     
+
      ${'' /* margin-bottom:2000px; */}
 `
 const Video01 = styled.div`
@@ -149,10 +149,10 @@ const Svideo = styled.div`
     width:100vw;
     height:100vh;
     display:${props=>props.show?'flex':'none'};
+    background: ${props => props.show ? "#00000088" : "none"};
     z-index:15000;
     flex-direction: column;
     top: 0;
-    
 `
 const ExampleText =styled.p`
     &:hover {
@@ -200,22 +200,25 @@ const Margin = styled.div`
     padding-top:100px;
 `
 
-
-
-
+const StyledFrame = styled.iframe`
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    height: 90%;
+`
 
 export default function Home() {
-    const [showVideo, setShowVideo] = useState(false); 
+    const [showVideo, setShowVideo] = useState(false);
     return (
         <>
             <Head title="VALORANT: เกมยิงปืนจาก Riot Games ในรูปแบบ 5v5 ที่ขับเคลื่อนโดยตัวละครนักยิงปืนผู้มากความสามารถ" />
             <NavBar />
             <Content>
-                <Videos 
+                <Videos
                     className='videoTag' autoPlay loop muted>
                 <source src="https://playvalorant.com/assets/video/Retake-hero-desktop.mp4" type='video/mp4' />
                 </Videos>
-                
+
                 <Section>
                     <p style={{fontSize:"1rem"}}>เกมยิงปืนในรูปแบบ 5v5 ที่ขับเคลื่อนโดยเหล่าเอเจนทร์ผู้มากความสามารถ</p>
                     <Cen>
@@ -232,17 +235,17 @@ export default function Home() {
                                 fontSize:"20rem",
                                 position:"absolute",
                                 top:"-344px"
-                               
+
                                 }}>WE ARE</p>
                             <p style={{
                                 fontSize:"20rem",
                                 position:"absolute",
                                 top:"-80px",
-                                
+
                                 right:"150px"
-                               
+
                                 }}>VALORA</p>
-                            
+
                         </h2>
                     </BackgroundText >
                     <StyleTitle textColor="#f84754" fontSize="6.5rem">ข่าวสารล่าสุด</StyleTitle>
@@ -250,7 +253,7 @@ export default function Home() {
                     <Cen3>
                     <Title fontSize="5.6rem">พวกเราคือ VALORANT</Title>
                     </Cen3>
-                    
+
                     <Content01>
                     <Text01>
                         <h3>ก้าวข้ามทุกขีดจำกัด</h3>
@@ -259,18 +262,18 @@ export default function Home() {
                         <br></br>
                         <ExampleText  onClick={()=>setShowVideo(true)}>ดูตัวอย่างเกมเพลย์ที่นี่</ExampleText>
                     </Text01>
-                   
+
                     <Video01>
-                    
+
                     <img style={{width:"47vw", height:"", opacity:"1",cursor:"pointer",marginBottom:"150px"}} onClick={()=>setShowVideo(true)} src="/project/g41playvalorant/img/video_1.jpg" alt="Logo" />
                     </Video01>
-                    
+
                     </Content01>
                 </Container>
             </Content>
             <Svideo show={showVideo}>
-                        <button onClick={()=>setShowVideo(false)}>close</button>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6A_XP5NynCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <ExitButton onClick={()=>setShowVideo(false)} />
+                <StyledFrame src="https://www.youtube.com/embed/6A_XP5NynCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></StyledFrame>
             </Svideo>
             <Content02 style={{paddingTop:"50px"}}>
             <Text_all>
@@ -285,9 +288,9 @@ export default function Home() {
                     <Button isWhite style={{}}>ดูเอเจนท์ทั้งหมด</Button>
                 </Text02>
                 </Text_all>
-                
+
                 <ContentBG1></ContentBG1>
-                
+
             </Content02>
             <Content03>
             <Margin>
@@ -300,10 +303,10 @@ export default function Home() {
                                 position:"absolute",
                                margin:0
                                 ,left:"150px"
-                               
+
                                 }}>PLACE</p>
-                            
-                            
+
+
                         </h2>
                     </BackgroundText>
             <Text_all style={{
@@ -315,7 +318,7 @@ export default function Home() {
             <hr></hr>
                 <Title fontSize="6rem" width="100%">แผนที่ของคุณ</Title>
                 <Text02 style={{
-                
+
                 color:"black"
             }}>
                     <br></br>
@@ -330,7 +333,7 @@ export default function Home() {
                 </Margin>
             </Content03>
             <Footer />
-            
+
         </>
     )
 }

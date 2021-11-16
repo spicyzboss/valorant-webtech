@@ -1,5 +1,5 @@
 export {default as Head} from './Head'
 export {default as Title} from './TextTitle'
-export {NavBar} from './Nav'
+export {NavBar, ExitButton} from './Nav'
 export {Footer} from './Footer'
 export {Button} from './Button'
