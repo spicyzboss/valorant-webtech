@@ -295,7 +295,7 @@ export default function Home() {
             <Content03>
             <Margin>
             <BackgroundText style={{
-                top:"px",
+                top:"0px",
             }}>
                         <h2 className={ styles.stroke } style={{opacity:0.2}} >
                             <p  style={{
