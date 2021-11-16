@@ -30,7 +30,13 @@ const ItemWrapper = styled.div`
     position: relative;
     transition: background-color .3s ease-in-out;
 
-    &:hover {
+    &::before {
+        content: "";
+        transform: skewx(-45deg);
+        width: 10vw;
+        height: 10vw;
+        position: absolute;
+        overflow: hidden;
         background-color: #ff4655;
     }
 `

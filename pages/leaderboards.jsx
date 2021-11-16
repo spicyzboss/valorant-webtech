@@ -17,7 +17,10 @@ const TitleRadiant = styled.img`
     object-fit: contain;
 `
 
-const Image = styled.img``
+const Image = styled.img`
+    width: 50%;
+    object-fit: contain;
+`
 
 const ParallaxBg = styled.div`
     background: url('/project/g41playvalorant/img/leaderboards-hero-banner.jpeg') no-repeat;
@@ -235,6 +238,7 @@ const DropdownWrapper = styled.ul`
     padding: 0;
     list-style: none;
     border: 1px solid  #bdbcb7;
+    z-index: ${props => props.show ? "10" : "-1"};
     opacity: ${props => props.show ? "100" : "0"};
     transition: opacity .2s ease-in-out;
 `
@@ -325,9 +329,9 @@ const NextButton = ({ inactive, flipx }) => (
     </StyledSVG>
 )
 
-const IconButton = ({ children, inactive }) => {
+const IconButton = ({ children, inactive, onClick }) => {
     return (
-        <StyledIconButton inactive={inactive}>
+        <StyledIconButton inactive={inactive} onClick={onClick}>
             {children}
         </StyledIconButton>
     )
@@ -364,7 +368,15 @@ const GreyText = styled.span`
 const Leaderboards = () => {
     const [showRankDropdown, setShowRankDropdown] = useState(false);
     const [showSeasonDropdown, setShowSeasonDropdown] = useState(false);
-    const [page, setPage] = useState(0);
+    const [page, setPage] = useState({ page: 0, data: Data });
+
+    const HandleNext = () => {
+        setPage({ page: page.page + 1, data: Data });
+    }
+
+    const HandlePrev = () => {
+        setPage({ page: Math.max(0, page.page - 1), data: Data });
+    }
 
     return (
         <>
@@ -432,12 +444,12 @@ const Leaderboards = () => {
                             </ListItemWrapper>
                             <DownIcon show={showSeasonDropdown} />
                             <DropdownWrapper show={showSeasonDropdown}>
-                                <DropdownItem>EPISODE 2 //// ACT 1</DropdownItem>
-                                <DropdownItem>EPISODE 2 //// ACT 2</DropdownItem>
-                                <DropdownItem>EPISODE 2 //// ACT 3</DropdownItem>
-                                <DropdownItem>EPISODE 3 //// ACT 1</DropdownItem>
-                                <DropdownItem>EPISODE 3 //// ACT 2</DropdownItem>
-                                <DropdownItem>EPISODE 3 //// ACT 3</DropdownItem>
+                                <DropdownItem>EPISODE 2 <GreyText>//// ACT 1</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 2 <GreyText>//// ACT 2</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 2 <GreyText>//// ACT 3</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 3 <GreyText>//// ACT 1</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 3 <GreyText>//// ACT 2</GreyText></DropdownItem>
+                                <DropdownItem>EPISODE 3 <GreyText>//// ACT 3</GreyText></DropdownItem>
                             </DropdownWrapper>
                         </SeasonHead>
                     </HeadTable>
@@ -449,14 +461,13 @@ const Leaderboards = () => {
                             <Col4 fontSize=".75rem" aligny="bottom" nobackground><GreyText>กำลังดำเนินการ</GreyText></Col4>
                         </Row>
                         {
-                            Data.map((player, index) => {
-                                if (index >= page * 10 && index < (page + 1) * 10) {
-                                    console.log(player.rank)
+                            page.data.map((player, index) => {
+                                if (index >= page.page * 10 && index < (page.page + 1) * 10 - 1) {
                                     return (
                                         <Row height={!index ? `17vh` : `9vh`} border key={index}>
                                             <Col1 background="#e3dfd9">
                                                 {!index ? <NumberLarge>{player.rank}</NumberLarge> : <NumberSmall>{player.rank}</NumberSmall>}
-                                                <StarSvg />
+                                                {!index ? <StarSvg /> : null}
                                             </Col1>
                                             <Col2 background="#dbd9d2" padding={!index ? "3vh 2vh" : null}>
                                                 <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
@@ -478,19 +489,19 @@ const Leaderboards = () => {
                         <ViewRankButton>เข้าสู่ระบบเพื่อดูแรงค์</ViewRankButton>
                     </div>
                     <ButtonRightSection>
-                        <IconButton inactive>
-                            <PreviousButton inactive flipx />
+                        <IconButton inactive={!(page.page > 0)} onClick={HandlePrev}>
+                            <PreviousButton flipx inactive={!(page.page > 0)} />
                         </IconButton>
-                        <IconButton inactive>
-                            <NextButton flipx inactive />
+                        <IconButton inactive={!(page.page > 0)} onClick={HandlePrev}>
+                            <NextButton flipx inactive={!(page.page > 0)} />
                         </IconButton>
                         <PageNumberWrapper>
-                            หน้า 1/2022
+                            หน้า {page.page+1}/2022
                         </PageNumberWrapper>
-                        <IconButton>
-                            <NextButton onClick={() => setPage(page + 1)} />
+                        <IconButton onClick={HandleNext}>
+                            <NextButton />
                         </IconButton>
-                        <IconButton>
+                        <IconButton onClick={HandleNext}>
                             <PreviousButton />
                         </IconButton>
                     </ButtonRightSection>
