@@ -86,14 +86,14 @@ const ContentNumber = styled.div`
 
 `
 
-const Card = ({ data }, { width }, { height }) => {
-    const pic = `/project/g41playvalorant/news_content/pic/hot_news/${data.ID}.jpeg`
+const Card = ({ data, width, height }) => {
+
     return (
         <>
             <BlankCard >
                 <NewsCard width={width} height={height}>
                     <Picture className="hoverSlide">
-                        <RecomendImg src={pic} ></RecomendImg>
+                        <RecomendImg src={data.IMGPATH} ></RecomendImg>
                     </Picture>
                     <ContentNumber>{data.ID}</ContentNumber>
                     <div style={{ height: '8vh' }} />

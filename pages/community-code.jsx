@@ -1,6 +1,12 @@
 import { Footer, Head, NavBar, Title } from '../components'
 import styled from 'styled-components'
+import { Card } from '../components/NewsComponents'
+import Slider from 'react-slick'
+import Data from '../public/news_content/contents.json'
+const Item = styled(Slider)`
 
+
+`
 const Banner = styled.div`
     height: 71vh;
     width: 100%;
@@ -44,15 +50,78 @@ const Blodtext2 = styled.div`
         font-weight: 600;
         margin-top: 5vh;
 `
-const Linefont = styled.div`
-        border-color:black;
-        border-width: 3;
-        width: 3px;
-        height: 2px;
-        transform: rotate(90deg);
-       background-color:blueviolet;
+
+const SLickStyle = styled(Slider)`
+    .slick-list {
+        overflow: ${(props) => (props.overflow ? "visible" : "hidden")};
+    }
+    .slick-slide{
+        float: left;
+        z-index: 0;
+        user-select: none;
+    }
+    .slick-track .slick-active{
+        filter: brightness(70%)
+    }
+    
+    .slick-dots{
+        position: absolute;
+        left: -250px;
+        top: 50px;
+        width: 200px;
+        height: 6px !important;
+        display: flex;
+        list-style-type: none;
+
+    }
+    .dot-custom{
+        width: 40px;
+        height: 6px;
+        margin-right: 10px;
+        position: relative;
+        background: none;
+        border: .1px solid white;
+        cursor: pointer;
+        transition: .5s;
+    }
+    .slick-dots .slick-active{
+        width: 40px;
+        height: 100%;
+        margin-right: 10px;
+    }
+    .slick-active .dot-custom, .dot-custom:hover{
+        background: #ff4655;
+        border:  1px solid #ff4655;
+    }
+`
+const SliderContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+`
+const About = styled.div`
+    background: #ece8e1;
+    height: 100%;
+    margin-left:auto;
+    font-weight: 600;
+    font-size: 15px;
+    margin:4px;
+
 `
 const CommunityCode = () => {
+    let settings = {
+        dots: true,
+        infinite: false,
+        arrows: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        appendDots: dots => <ul>{dots}</ul>,
+        customPaging: i => (
+            <div className="dot-custom">
+            </div>
+        )
+    };
     return (
         <>
             <Head title="ระเบียบชุมชนของ VALORANT" />
@@ -153,8 +222,18 @@ const CommunityCode = () => {
 
                     </Wraptextgrey>
                 </Movetext>
+                <About>
+                    <h1>เนื้อหาที่เกี่ยวข้อง</h1>
+                    <SLickStyle {...settings}>{Data.NEWS.map((newsitem, index) => {
+                        return <Card data={newsitem} key={index} width="40%" height="40%">
 
+                        </Card>
+                    })}
+                    </SLickStyle>
+
+                </About>
             </ContentSection>
+
             <Footer />
         </>
     )
