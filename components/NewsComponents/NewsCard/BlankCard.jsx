@@ -7,7 +7,6 @@ const BlankCard = styled.div`
     position: relative;
     margin-right: 17.5vw;
     left: 0;
-    background:red;
     &:hover .hoverSlide:before{
         transform: translateX(-10%) skewX(-10deg);
 

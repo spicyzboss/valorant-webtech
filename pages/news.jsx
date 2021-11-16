@@ -5,7 +5,8 @@ import Slider from 'react-slick';
 //import { View, ScrollView } from 'react-native'
 
 //components
-import {Card, BlankCard, NewsCard, TextBG, NewsFrame} from '../components/NewsComponents'
+import {Card, BlankCard, NewsCard, NewsFrame} from '../components/NewsComponents'
+import TextBG from '../components/TextBg'
 const TitleUp = keyframes`
     from {
         transform: translateY(30px);
@@ -27,12 +28,6 @@ const Title = styled.p`
         text-indent: 0;
     }
 `
-const NewsRec = styled.div`
-    position: absolute;
-    width: 100vw;
-    height: 150vh;
-    background: #0f1923;
-`
 
 const HotNews = styled.div`
     width: 130vw;
@@ -52,7 +47,7 @@ const HotNews = styled.div`
     }
     @media (max-width: 1024px){
         position: relative;
-        margin-top: 10vh; 
+        margin-top: 10vh;
 
         left: -8vw;
         display: block;
@@ -79,7 +74,7 @@ const SliderContainer = styled.div`
 const SLickStyle = styled(Slider)`
     .slick-list {
         overflow: ${(props) => (props.overflow ? "visible" : "hidden")};
-    }    
+    }
     .slick-slide{
         float: left;
         z-index: 0;
@@ -98,7 +93,7 @@ const SLickStyle = styled(Slider)`
         width: 200px;
         height: 6px !important;
         display: flex;
-        list-style-type: none; 
+        list-style-type: none;
 
     }
     .dot-custom{
@@ -140,7 +135,7 @@ const NewsCss = css`
     body {
     padding: 0;
     margin: 0;
-    
+
     overflow-x: hidden;
     background-color: antiquewhite;
     }
@@ -175,12 +170,7 @@ const News = () => {
             <NavBar />
             <style>{ NewsCss }</style>
             <Box style={{ height: "150vh" }}>
-                <NewsRec>
-                    <h2 className={ styles.stroke }>
-                        <TextBG className={ styles.textBackground1 }>WE ARE</TextBG>
-                        <TextBG className={ styles.textBackground2 }>VALORANT</TextBG>
-                    </h2>
-                </NewsRec>
+                <TextBG/>
                 <NewsFrame style={{ height: '100vh' }}>
                     <Title className={ styles.resTitle }>แนะนำข่าวสาร</Title>
                     <NewsFrame id="Recomend" style={{  height: '140vh', left: -1 }}>
@@ -190,11 +180,10 @@ const News = () => {
                                         <SLickStyle {...settings}>
                                         {
                                             data.HOT_NEWS.map((card, index)=>{
-                                                console.log(index)
                                             return  <Card key={ index } data={card}/>
                                             })
                                         }
-                                            <BlankCard style={{ background : "red" }} />
+                                            <BlankCard/>
                                         </SLickStyle>
                                     </SliderContainer>
                                 </WrapNews>
