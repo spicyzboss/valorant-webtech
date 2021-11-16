@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Footer, Head, NavBar, Title } from '../components'
 import { useState } from 'react';
+import Data from '../assets/leaderboards.json'
 
 const TopSection = styled.section`
     height: 68vh;
@@ -363,6 +364,7 @@ const GreyText = styled.span`
 const Leaderboards = () => {
     const [showRankDropdown, setShowRankDropdown] = useState(false);
     const [showSeasonDropdown, setShowSeasonDropdown] = useState(false);
+    const [page, setPage] = useState(0);
 
     return (
         <>
@@ -446,92 +448,29 @@ const Leaderboards = () => {
                             <Col3 fontSize=".75rem" nobackground></Col3>
                             <Col4 fontSize=".75rem" aligny="bottom" nobackground><GreyText>กำลังดำเนินการ</GreyText></Col4>
                         </Row>
-                        <Row height="17vh" border>
-                            <Col1 background="#e3dfd9">
-                                <NumberLarge>1</NumberLarge>
-                                <StarSvg />
-                            </Col1>
-                            <Col2 background="#dbd9d2" padding="3vh 2vh">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                <RatingLarge>911</RatingLarge>
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">
-                                <NameLarge>PRX Jinggg<GreyText>#Jing</GreyText></NameLarge>
-                            </Col3>
-                            <Col4 background="#e3dfd9">46 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>2</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                842
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">PRX f0rsakeN<GreyText>#biboo</GreyText></Col3>
-                            <Col4 background="#e3dfd9">66 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>3</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                818
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">LVR Deryeon<GreyText>#Ting</GreyText></Col3>
-                            <Col4 background="#e3dfd9">61 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>4</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                739
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">Mojer<GreyText>#kndra</GreyText></Col3>
-                            <Col4 background="#e3dfd9">56 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>5</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                711
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">vateRr ramos<GreyText>#BTR</GreyText></Col3>
-                            <Col4 background="#e3dfd9">51 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>6</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                710
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">FS JohnOlsen<GreyText>#1TAP</GreyText></Col3>
-                            <Col4 background="#e3dfd9">41 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>7</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                709
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">LVR juicy<GreyText>#noaim</GreyText></Col3>
-                            <Col4 background="#e3dfd9">37 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>8</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                706
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">JUST LOSE BENAF<GreyText>#gnext</GreyText></Col3>
-                            <Col4 background="#e3dfd9">45 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
-                        <Row height="9vh" border>
-                            <Col1 background="#e3dfd9"><NumberSmall>9</NumberSmall></Col1>
-                            <Col2 background="#dbd9d2">
-                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
-                                696
-                            </Col2>
-                            <Col3 background="rgba(219,217,210,.8);">Moosey<GreyText>#benaf</GreyText></Col3>
-                            <Col4 background="#e3dfd9">52 <GreyText>เกมที่ชนะ</GreyText></Col4>
-                        </Row>
+                        {
+                            Data.map((player, index) => {
+                                if (index >= page * 10 && index < (page + 1) * 10) {
+                                    console.log(player.rank)
+                                    return (
+                                        <Row height={!index ? `17vh` : `9vh`} border key={index}>
+                                            <Col1 background="#e3dfd9">
+                                                {!index ? <NumberLarge>{player.rank}</NumberLarge> : <NumberSmall>{player.rank}</NumberSmall>}
+                                                <StarSvg />
+                                            </Col1>
+                                            <Col2 background="#dbd9d2" padding={!index ? "3vh 2vh" : null}>
+                                                <Image src="/project/g41playvalorant/img/radiant-badge.png" alt="radiant-badge" width="100%" height="100%" objectFit="contain" />
+                                                {!index ? <RatingLarge>{player.rating}</RatingLarge> : player.rating}
+                                            </Col2>
+                                            <Col3 background="rgba(219,217,210,.8);">
+                                                {!index ? (<NameLarge>{player.name}<GreyText>{player.tag}</GreyText></NameLarge>) : (<p>{player.name}<GreyText>{player.tag}</GreyText></p>)}
+                                            </Col3>
+                                            <Col4 background="#e3dfd9">{player.game} <GreyText>เกมที่ชนะ</GreyText></Col4>
+                                        </Row>
+                                    )
+                                }
+                            })
+                        }
                     </RowWrapper>
                 </TableWrapper>
                 <ButtonWrapper>
@@ -549,7 +488,7 @@ const Leaderboards = () => {
                             หน้า 1/2022
                         </PageNumberWrapper>
                         <IconButton>
-                            <NextButton />
+                            <NextButton onClick={() => setPage(page + 1)} />
                         </IconButton>
                         <IconButton>
                             <PreviousButton />
