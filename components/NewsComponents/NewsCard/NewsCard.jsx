@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 const PicContainer = styled.div`
-    width: 40%;
+    width: 35%;
     height: 281.18px;
     position: relative;
     overflow: hidden;
