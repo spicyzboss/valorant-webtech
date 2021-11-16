@@ -44,7 +44,14 @@ const Blodtext2 = styled.div`
         font-weight: 600;
         margin-top: 5vh;
 `
-
+const Linefont = styled.div`
+        border-color:black;
+        border-width: 3;
+        width: 3px;
+        height: 2px;
+        transform: rotate(90deg);
+       background-color:blueviolet;
+`
 const CommunityCode = () => {
     return (
         <>
@@ -147,11 +154,11 @@ const CommunityCode = () => {
                     </Wraptextgrey>
                 </Movetext>
 
-
             </ContentSection>
             <Footer />
         </>
     )
 }
+
 
 export default CommunityCode;
