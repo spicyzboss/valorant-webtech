@@ -111,7 +111,7 @@ export default function Home() {
                 </Section>
                 <Container>
                     <BackgroundText>
-                        <h2 className={ styles.stroke } style={{opacity:0.2}} >
+                        <h2 className={ styles.stroke } style={{opacity:0.1}} >
                             {/* <TextBG className={ styles.textBackground1 }>WE ARE</TextBG>
                             <TextBG className={ styles.textBackground2 }>Valona</TextBG> */}
                         </h2>
