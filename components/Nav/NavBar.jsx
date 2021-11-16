@@ -38,7 +38,7 @@ const NavBar = () => {
     return (
         <NavLayout>
             <RiotLogo isGameBarOpen={openRiotGameBar} onClick={handleRiotGameBarClick} stateControl={RiotGameBarStateControl} />
-            <Separator />
+            {/* <Separator /> */}
             <ValorantLogo href="/" />
             <Dropdown title="ข้อมูลเกม">
                 <Li href="/agents" title="เอเจนท์" />

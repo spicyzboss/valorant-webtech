@@ -44,7 +44,7 @@ const HoverWrapper = styled.div`
         height: 100%;
         background: #ff4655;
         transform: translateX(-120%) skewX(-10deg);
-        transition: all .1s ease-in-out;
+        transition: all .35s ease-in-out;
         mix-blend-mode: multiply;
         z-index: 0;
     }
