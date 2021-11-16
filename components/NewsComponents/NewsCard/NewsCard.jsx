@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 const PicContainer = styled.div`
     width: 40%;
     height: 281.18px;
-    background: red;
     position: relative;
     overflow: hidden;
     &:before{
