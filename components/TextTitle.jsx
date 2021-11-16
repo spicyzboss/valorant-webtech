@@ -10,9 +10,9 @@ const StyledTitle = styled.p`
   line-height: 1.3;
 `
 
-const Title = ({ textColor, children, fontSize }) => {
+const Title = ({ textColor, children, fontSize,textAlign }) => {
     return (
-        <StyledTitle color={textColor} fontSize={fontSize}>
+        <StyledTitle color={textColor} fontSize={fontSize} textAlign={textAlign}>
             {children}
         </StyledTitle>
     )
