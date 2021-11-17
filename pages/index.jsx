@@ -27,10 +27,11 @@ const Section = styled.section`
     row-gap: 10px;
     align-items: center;
     position:absolute;
-    top: 50%;
+    top: 16%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    ${'' /* z-index:100; */}
 
 `
 
@@ -75,6 +76,8 @@ const Cen3 = styled.div`
 `
 const Content = styled.div`
     background-color:#ebe8e1;
+    position:relative;
+    
 
 
 
@@ -206,19 +209,58 @@ const StyledFrame = styled.iframe`
     width: 100%;
     height: 90%;
 `
+const Hidden = styled.div`
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+`
+
 
 export default function Home() {
     const [showVideo, setShowVideo] = useState(false);
     return (
         <>
+        
+       
             <Head title="VALORANT: เกมยิงปืนจาก Riot Games ในรูปแบบ 5v5 ที่ขับเคลื่อนโดยตัวละครนักยิงปืนผู้มากความสามารถ" />
             <NavBar />
+            <Hidden>
+            <div style={{
+            borderLeft: '1px solid gray' ,
+            opacity:"0.5",
+            position:"absolute",
+            height:"100%",
+             
+            left:"9.2vw",
+            zIndex:"150",
+            color:"white"
+            // width:"1500px",
+            // background:"#fe0000"
+            
+
+            
+            }}></div>
+              <div style={{
+             borderLeft: '1px solid gray' ,
+            opacity:"0.4",
+            // position:"relative",
+            height:"100%",
+            
+            left:"90vw",
+            zIndex:"0",
+            color:"white"
+            
+
+            
+            }}></div>
             <Content>
+            
                 <Videos
                     className='videoTag' autoPlay loop muted>
                 <source src="https://playvalorant.com/assets/video/Retake-hero-desktop.mp4" type='video/mp4' />
                 </Videos>
-
+               
                 <Section>
                     <p style={{fontSize:"1rem"}}>เกมยิงปืนในรูปแบบ 5v5 ที่ขับเคลื่อนโดยเหล่าเอเจนทร์ผู้มากความสามารถ</p>
                     <Cen>
@@ -332,8 +374,9 @@ export default function Home() {
                 <ContentBG2></ContentBG2>
                 </Margin>
             </Content03>
+        </Hidden>
             <Footer />
-
+        
         </>
     )
 }
