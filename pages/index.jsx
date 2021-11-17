@@ -2,6 +2,8 @@
 import { Head, NavBar, Footer, Button, Title, ExitButton } from "../components";
 import styled, { css, keyframes } from 'styled-components'
 import {Card, BlankCard, NewsCard, TextBG, NewsFrame} from '../components/NewsComponents'
+import Slider from 'react-slick'
+import Data from '../public/news_content/contents.json'
 import styles from '../styles/News.module.css'
 import logo from '../public/img/video_1.jpg'
 import {useState} from 'react'
@@ -19,80 +21,41 @@ const StyleTitle = styled(Title)`
 `
 
 const Section = styled.section`
-    /* height: 100vh; */
-    // background-color: wheat;
     display: flex;
     color:white;
     flex-direction: column;
     row-gap: 10px;
     align-items: center;
     position:absolute;
-    top: 16%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    ${'' /* z-index:100; */}
-
 `
 
 const Videos = styled.video`
     width:100%;
     z-index:-1;
-
-
-
-
-    }
 `
 const Cen = styled.div`
     margin-bottom:50px;
-
-
-
-
-    }
 `
 const Cen2 = styled.div`
     position:absolute;
     top:260px;
-
-
-
-
-    }
 `
 const Cen3 = styled.div`
-    position:absolute;
-    top: 190px;
-    left: 60%;
-    transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
-
-
-
-
-    }
 `
 const Content = styled.div`
     background-color:#ebe8e1;
     position:relative;
-    
-
-
-
-
-    }
 `
 const Content03 = styled.div`
     background-color:#ebe8e1;
     position:relative;
-    ${'' /* width:100vw;
-    height:100vh; */}
     display: block;
-
-
-    }
 `
 const BackgroundText = styled.div`
     position: absolute;
@@ -102,21 +65,12 @@ const BackgroundText = styled.div`
     right: 0;
     z-index: 0;
     overflow: hidden;
-
-
-
-
-
-
-    }
 `
 const Container = styled.div`
     width:100vw;
     position: relative;
     margin-left:144px;
     margin-top:170px;
-
-    // z-index:2000;
 `
 
 const Text01 = styled.div`
@@ -125,8 +79,6 @@ const Text01 = styled.div`
     position: relative;
     margin-left:144px;
     margin-top:100px;
-
-    // z-index:2000;
 `
 const Content01 = styled.div`
     display:flex;
@@ -136,17 +88,18 @@ const Content02 = styled.div`
      background-color:#f84754;
      width:100%;
      height:auto;
-
-     ${'' /* margin-bottom:2000px; */}
 `
+
 const Video01 = styled.div`
-    width:19vw;
-    opacity:1;
+    width:47vw;
     position: relative;
     margin-left:144px;
     margin-top:100px;
-    // z-index:2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
+
 const Svideo = styled.div`
     position:fixed;
     width:100vw;
@@ -157,6 +110,7 @@ const Svideo = styled.div`
     flex-direction: column;
     top: 0;
 `
+
 const ExampleText =styled.p`
     &:hover {
         color:black;
@@ -165,39 +119,36 @@ const ExampleText =styled.p`
     cursor:pointer;
     transition: all .1s ease-in-out;
 `
-const ContentBG1 =styled.div`
-    background-image: url("https://i.ytimg.com/vi/PcpJPTodvgA/maxresdefault.jpg");
-    width:100vw;
-    height:100vh;
 
+const ContentBG1 =styled.div`
+    background-image: url("/project/g41playvalorant/img/agents.jpeg");
+    z-index: 5;
+    width:100%;
+    height:100vh;
+    background-repeat: no-repeat;
 `
 const ContentBG2 =styled.div`
     position:relative;
-    background-image: url("https://media.discordapp.net/attachments/896040304002617374/910186033667264572/maps-03ebbf2c074f13a65af1dba0c80f767e.png?width=959&height=670");
-    background-size:cover;
-    ${'' /* right:0; */}
+    background-image: url("/project/g41playvalorant/img/maps.png");
+    background-size: cover;
     width:80vw;
     height:100vh;
     bottom:100px;
     left:400px;
     background-repeat:none;
-
 `
 const Text02 =styled.div`
     color:white;
     width:100%;
     height:100vh;
     position:absolute;
-
 `
 const Text_all =styled.div`
-    ${'' /* background-color:red; */}
     color:white;
     width:30vw;
     height:100vh;
     position:absolute;
     right:10vw;
-
 `
 const Margin = styled.div`
     padding-top:100px;
@@ -216,51 +167,133 @@ const Hidden = styled.div`
     position: relative;
 `
 
+const About = styled.div`
+    background: #ece8e1;
+    height: 100%;
+    margin-left:auto;
+    font-weight: 600;
+    font-size: 15px;
+    margin:4px;
+
+`
+
+const SLickStyle = styled(Slider)`
+    .slick-list {
+        overflow: ${(props) => (props.overflow ? "visible" : "hidden")};
+    }
+    .slick-slide{
+        float: left;
+        z-index: 0;
+        user-select: none;
+    }
+    .slick-track .slick-active{
+        filter: brightness(70%)
+    }
+
+    .slick-dots{
+        position: absolute;
+        left: -250px;
+        top: 50px;
+        width: 200px;
+        height: 6px !important;
+        display: flex;
+        list-style-type: none;
+
+    }
+    .dot-custom{
+        width: 40px;
+        height: 6px;
+        margin-right: 10px;
+        position: relative;
+        background: none;
+        border: .1px solid white;
+        cursor: pointer;
+        transition: .5s;
+    }
+    .slick-dots .slick-active{
+        width: 40px;
+        height: 100%;
+        margin-right: 10px;
+    }
+    .slick-active .dot-custom, .dot-custom:hover{
+        background: #ff4655;
+        border:  1px solid #ff4655;
+    }
+`
+const StyledPlayBtn = styled.svg`
+    z-index: 200;
+    transition: all .2s ease-in-out;
+    position: absolute;
+    top: 40%;
+    width: 72px;
+    height: 72px;
+    background: #f84754;
+    border: 1px solid #ece8e1;
+    cursor: pointer;
+
+    ${Video01}:hover & {
+        scale: 1.1;
+        background: black;
+    }
+`
+
+const PlayBtn = () => (
+    <StyledPlayBtn viewBox="0 0 72 72">
+        <path fill="none" stroke="#ece8e1" d="M33.5 34.5v-5l8 6v2l-8 6v-5m28-29l-7 7m-38 38l-7 7" />
+    </StyledPlayBtn>
+)
+
+const Simg = styled.img`
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    cursor: pointer;
+    margin-bottom: 150px;
+`
 
 export default function Home() {
     const [showVideo, setShowVideo] = useState(false);
+    let settings = {
+        dots: true,
+        infinite: false,
+        arrows: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        appendDots: dots => <ul>{dots}</ul>,
+        customPaging: i => (
+            <div className="dot-custom">
+            </div>
+        )
+    };
     return (
         <>
-        
-       
+
+
             <Head title="VALORANT: เกมยิงปืนจาก Riot Games ในรูปแบบ 5v5 ที่ขับเคลื่อนโดยตัวละครนักยิงปืนผู้มากความสามารถ" />
             <NavBar />
             <Hidden>
             <div style={{
-            borderLeft: '1px solid gray' ,
-            opacity:"0.5",
-            position:"absolute",
-            height:"100%",
-             
-            left:"9.2vw",
-            zIndex:"150",
-            color:"white"
-            // width:"1500px",
-            // background:"#fe0000"
-            
-
-            
+                borderLeft: '1px solid gray' ,
+                opacity:"0.5",
+                position:"absolute",
+                height:"100%",
+                left:"9.2vw",
+                zIndex:"150",
+                color:"white"
             }}></div>
-              <div style={{
-             borderLeft: '1px solid gray' ,
-            opacity:"0.4",
-            // position:"relative",
-            height:"100%",
-            
-            left:"90vw",
-            zIndex:"0",
-            color:"white"
-            
-
-            
+            <div style={{
+                borderLeft: '1px solid gray' ,
+                opacity:"0.4",
+                height:"100%",
+                left:"90vw",
+                zIndex:"0",
+                color:"white"
             }}></div>
             <Content>
-            
-                <Videos
-                    className='videoTag' autoPlay loop muted>
-                <source src="https://playvalorant.com/assets/video/Retake-hero-desktop.mp4" type='video/mp4' />
+                <Videos className='videoTag' autoPlay loop muted>
+                    <source src="/project/g41playvalorant/video/retake-hero-desktop.mp4" type='video/mp4' />
                 </Videos>
-               
                 <Section>
                     <p style={{fontSize:"1rem"}}>เกมยิงปืนในรูปแบบ 5v5 ที่ขับเคลื่อนโดยเหล่าเอเจนทร์ผู้มากความสามารถ</p>
                     <Cen>
@@ -291,11 +324,18 @@ export default function Home() {
                         </h2>
                     </BackgroundText >
                     <StyleTitle textColor="#f84754" fontSize="6.5rem">ข่าวสารล่าสุด</StyleTitle>
-                    <hr style={{ width:"70vw" ,position:"absolute",left:"10%",margin:"0"}}></hr>
-                    <Cen3>
-                    <Title fontSize="5.6rem">พวกเราคือ VALORANT</Title>
-                    </Cen3>
+                    <About>
+                        <h1>เนื้อหาที่เกี่ยวข้อง</h1>
+                        <SLickStyle {...settings}>{Data.NEWS.map((newsitem, index) => {
+                            return <Card data={newsitem} key={index} width="40%" height="40%">
 
+                            </Card>
+                        })}
+                        </SLickStyle>
+
+                    </About>
+                    <hr style={{ width:"70vw" ,position:"absolute",left:"10%",margin:"0"}}></hr>
+                    <Title fontSize="5.6rem" width="100%">พวกเราคือ VALORANT</Title>
                     <Content01>
                     <Text01>
                         <h3>ก้าวข้ามทุกขีดจำกัด</h3>
@@ -306,8 +346,8 @@ export default function Home() {
                     </Text01>
 
                     <Video01>
-
-                    <img style={{width:"47vw", height:"", opacity:"1",cursor:"pointer",marginBottom:"150px"}} onClick={()=>setShowVideo(true)} src="/project/g41playvalorant/img/video_1.jpg" alt="Logo" />
+                        <Simg onClick={()=>setShowVideo(true)} src="/project/g41playvalorant/img/gameplay-preview.jpeg" alt="preview-gameplay" />
+                        <PlayBtn />
                     </Video01>
 
                     </Content01>
@@ -318,32 +358,30 @@ export default function Home() {
                 <StyledFrame src="https://www.youtube.com/embed/6A_XP5NynCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></StyledFrame>
             </Svideo>
             <Content02 style={{paddingTop:"50px"}}>
-            <Text_all>
-            <hr style={{opacity:"0.3"}}></hr>
-            <Title fontSize="5rem" width="100%">เอเจนท์ของคุณ</Title>
-                <Text02>
-                    <br></br>
-                    <h4>ความคิดสร้างสรรค์คืออาวุธที่แข็งแกร่งที่สุดของคุณ</h4>
-                    <br></br>
-                    <p>เกมนี้ไม่ได้มีเพียงแค่ปืนหรือกระสุน คุณจะได้เลือกเอเจนท์ที่มาพร้อมอาวุธและความสามารถที่ยืดหยุ่น รวดเร็ว และรุนแรง ซึ่งความสามารถเหล่านี้จะช่วยฉายแสงให้ทักษะการยิงปืนของคุณเปล่งประกายยิ่งขึ้น ไม่มีเอเจนท์ไหนที่มีสไตล์การเล่นที่เหมือนกัน เช่นเดียวกับการที่ไม่มีไฮไลท์ใดที่เหมือนกัน</p>
-                    <br></br>
-                    <Button isWhite style={{}}>ดูเอเจนท์ทั้งหมด</Button>
-                </Text02>
+                <Text_all>
+                    <hr style={{opacity:"0.3"}}></hr>
+                    <Title fontSize="5rem" width="100%">เอเจนท์ของคุณ</Title>
+                    <Text02>
+                        <br></br>
+                        <h4>ความคิดสร้างสรรค์คืออาวุธที่แข็งแกร่งที่สุดของคุณ</h4>
+                        <br></br>
+                        <p>เกมนี้ไม่ได้มีเพียงแค่ปืนหรือกระสุน คุณจะได้เลือกเอเจนท์ที่มาพร้อมอาวุธและความสามารถที่ยืดหยุ่น รวดเร็ว และรุนแรง ซึ่งความสามารถเหล่านี้จะช่วยฉายแสงให้ทักษะการยิงปืนของคุณเปล่งประกายยิ่งขึ้น ไม่มีเอเจนท์ไหนที่มีสไตล์การเล่นที่เหมือนกัน เช่นเดียวกับการที่ไม่มีไฮไลท์ใดที่เหมือนกัน</p>
+                        <br></br>
+                        <Button isWhite style={{}}>ดูเอเจนท์ทั้งหมด</Button>
+                    </Text02>
                 </Text_all>
-
                 <ContentBG1></ContentBG1>
-
             </Content02>
             <Content03>
-            <Margin>
-            <BackgroundText style={{
-                top:"0px",
-            }}>
+                <Margin>
+                    <BackgroundText style={{
+                        top:"0px",
+                    }}>
                         <h2 className={ styles.stroke } style={{opacity:0.2}} >
                             <p  style={{
                                 fontSize:"20rem",
                                 position:"absolute",
-                               margin:0
+                                margin:0
                                 ,left:"150px"
 
                                 }}>PLACE</p>
@@ -351,32 +389,32 @@ export default function Home() {
 
                         </h2>
                     </BackgroundText>
-            <Text_all style={{
-                zIndex:"1",
-                left:"200px",
-                top:"100px",
-                color:"black"
-            }}>
-            <hr></hr>
-                <Title fontSize="6rem" width="100%">แผนที่ของคุณ</Title>
-                <Text02 style={{
+                    <Text_all style={{
+                        zIndex:"1",
+                        left:"200px",
+                        top:"100px",
+                        color:"black"
+                    }}>
+                    <hr></hr>
+                        <Title fontSize="6rem" width="100%">แผนที่ของคุณ</Title>
+                        <Text02 style={{
 
-                color:"black"
-            }}>
-                    <br></br>
-                    <h4 style={{opacity:"0.8"}}>ต่อสู้รอบโลก</h4>
-                    <br></br>
-                    <p style={{opacity:"0.5"}}>แผนที่แต่ละอันคือพื้นที่จัดแสดงความคิดสร้างสรรค์ของคุณ แผนการของทีมที่มีจุดมุ่งหมาย การเล่นที่น่าตื่นเต้น และช่วงเวลาที่น่ากังวล เล่นให้เป็นตำนานจนคนอื่นต้องตามรอย</p>
-                    <br></br>
-                    <Button>แสดงแผนที่ทั้งหมด</Button>
-                </Text02>
-            </Text_all>
-                <ContentBG2></ContentBG2>
+                        color:"black"
+                    }}>
+                            <br></br>
+                            <h4 style={{opacity:"0.8"}}>ต่อสู้รอบโลก</h4>
+                            <br></br>
+                            <p style={{opacity:"0.5"}}>แผนที่แต่ละอันคือพื้นที่จัดแสดงความคิดสร้างสรรค์ของคุณ แผนการของทีมที่มีจุดมุ่งหมาย การเล่นที่น่าตื่นเต้น และช่วงเวลาที่น่ากังวล เล่นให้เป็นตำนานจนคนอื่นต้องตามรอย</p>
+                            <br></br>
+                            <Button>แสดงแผนที่ทั้งหมด</Button>
+                        </Text02>
+                    </Text_all>
+                    <ContentBG2></ContentBG2>
                 </Margin>
             </Content03>
         </Hidden>
             <Footer />
-        
+
         </>
     )
 }
