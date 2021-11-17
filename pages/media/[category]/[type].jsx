@@ -64,22 +64,22 @@ const MediaCategory = () => {
     const router = useRouter();
     const { category, type } = router.query;
     const size = [["20vw","20vw" ], ["20vw", "30vw"], ["30vw", "30vw"]];
-    if(router.asPath == "/media/wallpaper"){
+    if(category == "wallpaper"){
         data = data.wallpaper;
     }
-    else if(router.asPath == "/media/video"){
+    else if(category == "video"){
         data = data.video;
     }
-    else if(router.asPath == "/media/screenshot"){
+    else if(category == "screenshot"){
         data = data.screenshot;
     }
-    else if(router.asPath == "/media/artwork"){
+    else if(category == "artwork"){
         data = data.artwork;
     }
-    else if(router.asPath == "/media/logo"){
+    else if(category == "logo"){
         data = data.logo;
     }
-    else if(router.asPath == "/media/content_creator"){
+    else if(category == "content_creator"){
         data = data.content_creator;
     }
     else{
@@ -99,7 +99,7 @@ const MediaCategory = () => {
                 <div className="GalContainer">
                     {
                         data.map(( image, index )=>{
-                            if(image.type === type || type == "all"){
+                            if(image.type === type ){
                                 let imgSize = size[Math.floor(Math.random()*3)]
                                 num++;
                                 return (<div key={ index } className="imgGallery" style={{ background: `url(${image.path})`, width: `${imgSize[0]}`, height: `${imgSize[1]}`}} ></div>)
