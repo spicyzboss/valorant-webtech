@@ -1,13 +1,6 @@
 import styled from 'styled-components'
 import { RiotGamesBar } from '../../components/Nav/RiotGamesBar'
-
-export const RiotLogoWrapper = styled.button`
-    cursor: pointer;
-    padding: 0;
-    background: none;
-    border: none;
-    margin-right: 1rem;
-`
+import RiotLogoWrapper from './RiotLogoWrapper'
 
 export const StyledLogo = styled.svg`
     width: 75px;

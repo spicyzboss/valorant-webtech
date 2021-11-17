@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { RiotLogoWrapper, StyledLogo, CaretDown } from "../../styles/nav_components/RiotLogo"
+import RiotLogoWrapper from "../../styles/nav_components/RiotLogoWrapper"
+import { StyledLogo, CaretDown } from "../../styles/nav_components/RiotLogo"
 
 const GamesBar = styled.div`
     position: fixed;
