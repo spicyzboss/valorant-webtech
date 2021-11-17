@@ -7,7 +7,7 @@ const GamesBar = styled.div`
     top: 0;
     height: 55vh;
     width: 100%;
-    background-color: white;
+    background-color: #f9f9f9;
     z-index: 30000;
     opacity: 1;
     display: flex;
@@ -46,13 +46,6 @@ const StyledTriangleUp = styled.svg`
     left: 38px;
 `
 
-const TitleRiotGames = styled.p`
-    font-family: 'Kanit', sans-serif;
-    font-size: 24px;
-    margin: 0;
-    font-weight: 700;
-`
-
 const TriangleUp = () => {
     return (
         <StyledTriangleUp viewBox="0 0 16 16" fill="#fff">
@@ -60,15 +53,6 @@ const TriangleUp = () => {
         </StyledTriangleUp>
     )
 }
-
-const RiotGamesWrapper = styled.div`
-    height: 80%;
-    top: 70px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 98%;
-    position: relative;
-`
 
 const AdaptedLogo = styled(RiotLogoWrapper)`
     position: absolute;
@@ -95,22 +79,77 @@ const CloseButton = ({ onClick }) => (
     <StyledCloseButton onClick={onClick}>
         <CloseSvg width="32" height="32" viewBox="0 0 24 24">
             <rect opacity=".07" width="24" height="24" rx="2" fill="#333" />
-            <path stroke="#7E7E7E" stroke-width="2" d="M8.007 7.973l8.132 8.132m-8.146-.012l8.132-8.132" />
+            <path stroke="#7E7E7E" strokeWidth="2" d="M8.007 7.973l8.132 8.132m-8.146-.012l8.132-8.132" />
         </CloseSvg>
     </StyledCloseButton>
 )
 
+const RiotGamesWrapper = styled.div`
+    height: 80%;
+    top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    position: relative;
+`
+
 const NavLeft = styled.div`
+    grid-column: auto/span 1;
+    grid-row: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    padding: 0 1rem;
+    height: 100%;
+    position: relative;
+`
+
+const NavRight = styled.div`
+    grid-column: auto/span 1;
+    grid-row: 1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 `
 
 const ListWrapper = styled.ul`
     list-style: none;
+    padding: 0;
 `
 
 const ListItem = styled.li`
+    padding: 6px 0px 6px 20px;
+    margin: 3px 0;
+    border-radius: 5px;
+    color: #4a4a4a;
+    font-weight: ${props => props.header ? "bold" : "normal"};
+    background: ${props => props.header ? "rgba(186,186,186,.12)" : "transparent"};
+    cursor: ${props => props.header ? "auto" : "pointer"};
 
+    &:hover {
+        background: ${props => props.header ? "rgba(186,186,186,.12)" : "rgba(186,186,186,.25)"};
+    }
+`
+
+const ImgWrapper = styled.div`
+    margin: 1rem;
+    cursor: pointer;
+    height: fit-content;
+`
+
+const Img = styled.img`
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #00000055;
+    transition: all .2s ease-in-out;
+
+    ${ImgWrapper}:hover & {
+        box-shadow: 0px 0px 2rem #00000066;
+    }
+`
+
+const ImgText = styled.p`
+    margin-bottom: 0;
 `
 
 export const RiotGamesBar = ({ isOpen, stateControl}) => {
@@ -134,49 +173,55 @@ export const RiotGamesBar = ({ isOpen, stateControl}) => {
                     <NavLeft>
                         <div>
                             <ListWrapper>
-                                <li>อีเวนต์</li>
-                                <li>RIOTX ARCANE</li>
+                                <ListItem header>อีเวนต์</ListItem>
+                                <ListItem>RIOTX ARCANE</ListItem>
                             </ListWrapper>
                             <ListWrapper>
-                                <li>เกม</li>
-                                <li>VALORANT</li>
-                                <li>LEGENDS OF RUNETERRA</li>
-                                <li>LOL: WILD RIFT</li>
-                            </ListWrapper>
-                        </div>
-                        <div>
-                            <ListWrapper>
-                                <li>FORGE</li>
-                                <li>HEXTECH MAYHEM</li>
-                                <li>RUINED KING</li>
-                                <li>CONV/RGENCE</li>
-                                <li>SONG OF NUNU</li>
-                                <li>RIOT FORGE GAMES</li>
-                            </ListWrapper>
-                            <ListWrapper>
-                                <li>อีสปอร์ต</li>
-                                <li>อีสปอร์ต LOL</li>
-                                <li>อีสปอร์ต VALORANT</li>
+                                <ListItem header>เกม</ListItem>
+                                <ListItem>VALORANT</ListItem>
+                                <ListItem>LEGENDS OF RUNETERRA</ListItem>
+                                <ListItem>LOL: WILD RIFT</ListItem>
                             </ListWrapper>
                         </div>
                         <div>
                             <ListWrapper>
-                                <li>สื่อบันเทิง</li>
-                                <li>ARCANE</li>
-                                <li>UNIVERSE</li>
-                                <li>RIOT GAMES MUSIC</li>
+                                <ListItem header>FORGE</ListItem>
+                                <ListItem>HEXTECH MAYHEM</ListItem>
+                                <ListItem>RUINED KING</ListItem>
+                                <ListItem>CONV/RGENCE</ListItem>
+                                <ListItem>SONG OF NUNU</ListItem>
+                                <ListItem>RIOT FORGE GAMES</ListItem>
                             </ListWrapper>
                             <ListWrapper>
-                                <li>ธุรกิจ</li>
-                                <li>RIOT GAMES</li>
-                                <li>RIOT SUPPORT</li>
+                                <ListItem header>อีสปอร์ต</ListItem>
+                                <ListItem>อีสปอร์ต LOL</ListItem>
+                                <ListItem>อีสปอร์ต VALORANT</ListItem>
+                            </ListWrapper>
+                        </div>
+                        <div>
+                            <ListWrapper>
+                                <ListItem header>สื่อบันเทิง</ListItem>
+                                <ListItem>ARCANE</ListItem>
+                                <ListItem>UNIVERSE</ListItem>
+                                <ListItem>RIOT GAMES MUSIC</ListItem>
+                            </ListWrapper>
+                            <ListWrapper>
+                                <ListItem header>ธุรกิจ</ListItem>
+                                <ListItem>RIOT GAMES</ListItem>
+                                <ListItem>RIOT SUPPORT</ListItem>
                             </ListWrapper>
                         </div>
                     </NavLeft>
-                    <div>
-                        <img src="/project/g41playvalorant/img/nav_1.jpeg" alt="nav_1" />
-                        <img src="/project/g41playvalorant/img/nav_2.jpeg" alt="nav_2" />
-                    </div>
+                    <NavRight>
+                        <ImgWrapper>
+                            <Img src="/project/g41playvalorant/img/nav_1.jpeg" alt="nav_1" />
+                            <ImgText>Riot Forge ขอนำเสนอ Hextech Mayhem</ImgText>
+                        </ImgWrapper>
+                        <ImgWrapper>
+                            <Img src="/project/g41playvalorant/img/nav_2.jpeg" alt="nav_2" />
+                            <ImgText>ตัวอย่าง RiotX Arcane - ค่ำคืนเมืองเบื้องล่าง</ImgText>
+                        </ImgWrapper>
+                    </NavRight>
                 </RiotGamesWrapper>
             </GamesBar>
             <DimmedBackground onClick={() => stateControl(false)} />
