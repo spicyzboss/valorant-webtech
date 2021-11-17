@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Slider from "react-slick";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { Footer, Head, NavBar } from "../../components";
 import Link from 'next/link'

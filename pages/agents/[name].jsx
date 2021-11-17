@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useRef } from "react";
 import Slider from "react-slick";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from 'react';
 import styled, { css } from "styled-components";
 import { Button, Footer, Head, NavBar } from "../../components";
 
@@ -41,7 +41,7 @@ const Box = styled.div`
     width: 100vw;
     display: block;
     box-sizing: border-box;
-    background: url("/project/g41playvalorant/agent_content/pic/background_name.JPG")
+    background: url("/project/g41playvalorant/agent_content/pic/background_name.JPG");
 `
 const AgentName = styled.div`
     cursor: pointer;
@@ -155,10 +155,9 @@ const SkillFrame = styled.button`
         width: 100%;
         height: 100%;
         top:0;
-        left
     }
 `
-const Agents = () => {
+const Agents = ({ req, res }) => {
     const data = require("../../public/agent_content/contents.json");
     const convert = {
         "jett": 0, "raze": 1, "breach": 2, "omen": 3, "brimstone": 4,
