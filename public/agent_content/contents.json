@@ -1,6 +1,7 @@
 [
     {
         "name":"JETT",
+        "path": "jett",
         "id":"01",
         "job":"DUELIST",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_01.png",
@@ -8,18 +9,22 @@
         "skill":[
             {
                 "name": "Q - UPDRAFT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/01/01.png",
                 "discription": "พัดพา Jett ให้ลอยขึ้นไปบนอากาศทันที"
             },
             {
                 "name": "E - TAILWIND",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/01/02.png",
                 "discription": "Jett พุ่งตัวไปในทิศทางที่เธอกำลังเคลื่อนที่อยู่ทันที แต่หาก Jett ยืนนิ่งอยู่กับที่ เธอจะพุ่งตัวตรงไปข้างหน้า"
             },
             {
                 "name": "C - CLOUDBURST",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/01/03.png",
                 "discription": "โยนลูกบอลควันออกไปทันที โดยจะขยายตัวออกเป็นหมอกควันเพื่อบดบังวิสัยทัศน์เมื่อกระทบกับพื้นผิว กดปุ่มสกิลค้างไว้เพื่อโยนวิถีโค้งไปตามทิศทางเป้าเล็งของคุณ"
             },
             {
                 "name": "X - BLADE STORM",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/01/04.png",
                 "discription": "ติดตั้งเซ็ตมีดบินสุดแม่นยำ ที่จะรีชาร์จเมื่อสังหารศัตรู กดยิงเพื่อขว้างมีดสั้นไปยังเป้าหมาย กดโหมดการยิงเสริมเพื่อขว้างมีดสั้นที่เหลือทั้งหมดไปยังเป้าหมาย"
             }
         ]
@@ -28,6 +33,7 @@
     },
     {
         "name":"RAZE",
+        "path": "raze",
         "id":"02",
         "job":"DUELIST",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_02.png",
@@ -35,18 +41,22 @@
         "skill":[
             {
                 "name": "Q - BLAST PACK",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/02/01.png",
                 "discription": "โยน Blast Pack ที่จะยึดติดกับพื้นผิวทันที กดใช้งานสกิลอีกครั้งหลังจากปล่อยออกไปเพื่อจุดชนวนระเบิดที่จะสร้างดาเมจและผลักทุกสิ่งที่ถูกกระทบออกไป"
             },
             {
                 "name": "E - PAINT SHELLS",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/02/02.png",
                 "discription": "ติดตั้งระเบิดมือ กดยิงเพื่อโยนระเบิดมือออกไป การจุดชนวนจะสร้างดาเมจและทำให้เกิดระเบิดลูกย่อย ๆ เพิ่มขึ้นมาอีก ซึ่งแต่ละลูกก็จะสร้างดาเมจกับทุกคนที่อยู่ในรัศมีของมัน"
             },
             {
                 "name": "C - BOOM BOT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/02/03.png",
                 "discription": "ติดตั้ง Boom Bot กดยิงเพื่อปล่อยบอทให้วิ่งไปบนพื้นเป็นเส้นตรงและจะกระดอนออกมาเมื่อชนกำแพง Boom Bot จะล็อกเป้าหมายบนศัตรูที่ตรวจพบและไล่ติดตามไป โดยจะทำการระเบิดอย่างรุนแรงเมื่อไปถึงศัตรู"
             },
             {
                 "name": "X - SHOWSTOPPER",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/02/04.png",
                 "discription": "ติดตั้งเครื่องยิงจรวด กดยิงเพื่อปล่อยจรวดที่จะสร้างดาเมจในวงกว้างเมื่อกระทบกับสิ่งใด ๆ"
             }
         ]
@@ -55,6 +65,7 @@
     },
     {
         "name":"BREACH",
+        "path": "breach",
         "id":"03",
         "job":"INITIATOR",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_03.png",
@@ -62,18 +73,22 @@
         "skill":[
             {
                 "name": "Q - FLASHPOINT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/03/01.png",
                 "discription": "ติดตั้ง Blinding Charge กดยิงเพื่อปล่อยระเบิดที่ทะลุผ่านกำแพงอย่างรวดเร็ว ระเบิดลำแสงจะบดบังวิสัยทัศน์ของผู้เล่นทุกคนที่มองลำแสง"
             },
             {
                 "name": "E - FAULT LINE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/03/02.png",
                 "discription": "ติดตั้ง Seismic Blast กดยิงค้างไว้เพื่อเพิ่มระยะทาง และปล่อยเพื่อสร้างแรงสั่นสะเทือน ทำให้ผู้เล่นทั้งหมดที่อยู่ในพื้นที่และในแนวของการสั่นสะเทือนอยู่ในอาการมึนงง"
             },
             {
                 "name": "C - AFTERSHOCK",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/03/03.png",
                 "discription": "ติดตั้ง Fusion Charge กดยิงเพื่อปล่อยระเบิดที่จะหน่วงเวลาในการยิงทะลุผ่านกำแพง ระเบิดจะสร้างดาเมจอันรุนแรงแก่ผู้เล่นที่อยู่ในพื้นที่นั้น"
             },
             {
                 "name": "X - ROLLING THUNDER",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/03/04.png",
                 "discription": "ติดตั้ง Seismic Charge กดยิงเพื่อปล่อยแรงสั่นสะเทือนที่เคลื่อนผ่านได้ทุกพื้นที่เป็นรูปกรวยขนาดใหญ่ แรงสั่นสะเทือนจะทำให้ทุกคนที่ติดอยู่มึนงงและสิ้นสติ"
             }
         ]
@@ -82,6 +97,7 @@
     },
     {
         "name":"OMEN",
+        "path": "omen",
         "id":"04",
         "job":"CONTROLLER",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_04.png",
@@ -89,18 +105,22 @@
         "skill":[
             {
                 "name": "Q - PARANOIA",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/04/01.png",
                 "discription": "ติดตั้ง Blinding Orb ยิงเพื่อโยนไป จะทำให้หูหนวกและลดช่วงวิสัยทัศน์ของผู้เล่นทุกคนที่สัมผัสกับมันเป็นเวลาสั้น ๆ ลูกกระสุนนี้สามารถทะลุผ่านกำแพง"
             },
             {
                 "name": "E - DARK COVER",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/04/02.png",
                 "discription": "ติดตั้ง Shadow Orb และดูตัวบอกระยะผ่านกำแพง กดใข้สกิลเพื่อโยน Shadow Orb ไปยังตำแหน่งที่กำหนดไว้เพื่อสร้างโดมเงาดำที่จะบดบังวิสัยทัศน์เป็นเวลานาน กดยิงค้างไว้ในขณะกำหนดเป้าหมายเพื่อขยับเป้าหมายให้ไกลออกไป กดยิงเสริมค้างไว้ในขณะกำหนดเป้าหมายเพื่อขยับเป้าหมายให้ใกล้เข้ามา กดรีโหลดเพื่อสลับเป็นมุมมองการกำหนดเป้าหมายปกติ"
             },
             {
                 "name": "C - SHROUDED STEP",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/04/03.png",
                 "discription": "ติดตั้งสกิล Shrouded Step และดูตัวบอกระยะ กดยิงเพื่อทำการร่ายสั้น ๆ จากนั้นเทเลพอร์ตไปยังตำแหน่งที่กำหนดไว้ ศัตรูสามารถได้ยินเสียงจากตำแหน่งที่ออกเดินทางเท่านั้น"
             },
             {
                 "name": "X - FROM THE SHADOWS",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/04/04.png",
                 "discription": "ติดตั้งแผนที่ยุทธวิธี กดยิงเพื่อเริ่มทำการเทเลพอร์ตไปยังตำแหน่งที่กำหนดไว้ ระหว่างการเทเลพอร์ต Omen จะปรากฏตัวเป็นร่างเงาที่สามารถถูกศัตรูทำลายได้ เพื่อหยุดยั้งการเทเลพอร์ต หรือ Omen สามารถกดติดตั้ง เพื่อยกเลิกการเทเลพอร์ต"
             }
         ]
@@ -108,7 +128,8 @@
 
     },
     {
-        "name":"BRIMSTO",
+        "name":"BRIMSTONE",
+        "path": "brimstone",
         "id":"05",
         "job":"CONTROLLER",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_05.png",
@@ -116,18 +137,22 @@
         "skill":[
             {
                 "name": "Q - INCENDIARY",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/05/01.png",
                 "discription": "ติดตั้งเครื่องยิงระเบิดเพลิง กดยิงเพื่อปล่อยระเบิดที่จะระเบิดเมื่อตกสู่พื้น ก่อให้เกิดเปลวไฟที่จะสร้างความเสียหายกับผู้เล่นที่อยู่ในบริเวณนั้น"
             },
             {
+                "img": "/project/g41playvalorant/agent_content/pic/skill/05/02.png",
                 "name": "E - SKY SMOKE",
                 "discription": "ติดตั้งแผนที่ยุทธวิธี กดยิงเพื่อกำหนดตำแหน่งที่จะปล่อยหมอกควันของ Brimstone กดโหมดการยิงเสริมเพื่อยืนยันตำแหน่งและปล่อยหมอกควันที่จะบดบังวิสัยทัศน์ในพื้นที่ที่กำหนดไว้เป็นเวลานาน"
             },
             {
                 "name": "C - STIM BEACON",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/05/03.png",
                 "discription": "ติดตั้ง Stim Beacon กดยิงเพื่อวาง Stim Beacon ไปยังเบื้องหน้าของ Brimstone เมื่อวางอยู่บนพื้น Stim Beacon จะเพิ่มประสิทธิภาพในการยิงให้กับผู้เล่นในบริเวณนั้น"
             },
             {
                 "name": "X - ORBITAL STRIKE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/05/04.png",
                 "discription": "ติดตั้งแผนที่ยุทธวิธี กดยิงเพื่อปล่อยเลเซอร์ Orbital Strike ไปยังพื้นที่ที่กำหนด สร้างดาเมจที่จะเพิ่มความรุนแรงขึ้นเรื่อย ๆ กับผู้เล่นที่อยู่ในพื้นที่นั้น"
             }
         ]
@@ -136,6 +161,7 @@
     },
     {
         "name":"PHOENIX",
+        "path": "phoenix",
         "id":"06",
         "job":"DUELIST",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_06.png",
@@ -143,18 +169,22 @@
         "skill":[
             {
                 "name": "Q - CURVEBALL",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/06/01.png",
                 "discription": "ติดตั้ง Flare Orb ที่จะวิ่งเป็นเส้นโค้งและระเบิดหลังจากขว้างออกไปไม่นาน กดยิงเพื่อปล่อย Flare Orb โค้งไปทางซ้าย ระเบิดและทำให้ผู้เล่นที่เห็นออร์บนั้นสูญเสียการมองเห็น กดโหมดการยิงเสริมเพื่อปล่อย Flare Orb โค้งไปทางขวา"
             },
             {
                 "name": "E - HOT HANDS",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/06/02.png",
                 "discription": "ติดตั้งลูกบอลเพลิง กดยิงเพื่อขว้างลูกบอลเพลิงที่จะระเบิดหลังจากระยะเวลาที่กำหนดหรือเมื่อกระทบกับพื้น ทำให้เกิดบริเวณที่มีเพลิงไหม้ซึ่งจะสร้างดาเมจแก่ศัตรู"
             },
             {
                 "name": "C - BLAZE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/06/03.png",
                 "discription": "ติดตั้งกำแพงไฟ กดยิงเพื่อสร้างเส้นทางของไฟไปยังด้านหน้า ทำให้เกิดกำแพงไฟที่จะบดบังวิสัยทัศน์และสร้างดาเมจแก่ศัตรูที่เดินผ่าน กดยิงค้างไว้เพื่อโค้งกำแพงตามทิศทางเป้าเล็งของคุณ"
             },
             {
                 "name": "X - RUN IT BACK",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/06/04.png",
                 "discription": "ทำเครื่องหมายลงบนตำแหน่งของ Phoenix ในทันที การถูกสังหารหรือหมดเวลาขณะที่สกิลนี้ถูกใช้งานอยู่จะทำให้สกิลนี้สิ้นสุดลง และนำ Phoenix กลับสู่ตำแหน่งเดิมด้วยพลังชีวิตที่สมบูรณ์"
             }
         ]
@@ -163,6 +193,7 @@
     },
     {
         "name":"SAGE",
+        "path": "sage",
         "id":"07",
         "job":"SENTINEL",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_07.png",
@@ -170,18 +201,22 @@
         "skill":[
             {
                 "name": "Q - SLOW ORB",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/07/01.png",
                 "discription": "ติดตั้ง Healing Orb กดยิงและใช้เป้าเล็งของคุณชี้ไปยังพันธมิตรที่บาดเจ็บเพื่อฮีลพวกเขาเป็นระยะเวลาหนึ่ง กดโหมดการยิงเสริมขณะที่ Sage ได้รับบาดเจ็บ เพื่อฮีลตนเองเป็นระยะเวลาหนึ่ง"
             },
             {
                 "name": "E - HEALING ORB",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/07/02.png",
                 "discription": "ติดตั้ง Healing Orb กดยิงและใช้เป้าเล็งของคุณชี้ไปยังพันธมิตรที่บาดเจ็บเพื่อฮีลพวกเขาเป็นระยะเวลาหนึ่ง กดโหมดการยิงเสริมขณะที่ Sage ได้รับบาดเจ็บ เพื่อฮีลตนเองเป็นระยะเวลาหนึ่ง"
             },
             {
                 "name": "C - BARRIER ORB",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/07/03.png",
                 "discription": "ติดตั้ง Barrier Orb กดยิงเพื่อร่ายกำแพงสุดแข็งแกร่ง กดโหมดการยิงเสริมเพื่อหมุน"
             },
             {
                 "name": "X - RESURRECTION",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/07/04.png",
                 "discription": "ติดตั้งสกิล Resurrection กดยิงและใช้เป้าเล็งของคุณชี้ไปที่ร่างของพันธมิตรที่เสียชีวิตเพื่อชุบชีวิตพวกเขาให้ฟื้นกลับมามีพลังชีวิตที่สมบูรณ์ภายในระยะเวลาสั้น ๆ"
             }
         ]
@@ -190,6 +225,7 @@
     },
     {
         "name":"SOVA",
+        "path": "sova",
         "id":"08",
         "job":"INITIATOR",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_08.png",
@@ -197,18 +233,22 @@
         "skill":[
             {
                 "name": "Q - SHOCK BOLT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/08/01.png",
                 "discription": "ติดตั้งธนูด้วย Shock Bolt กดยิงเพื่อปล่อยลูกธนูระเบิดสายฟ้าไปข้างหน้า ซึ่งจะระเบิดเมื่อปะทะและสร้างดาเมจแก่ผู้เล่นใกล้เคียง กดยิงค้างไว้เพื่อเพิ่มระยะการยิง กดโหมดการยิงเสริมเพื่อเพิ่มจำนวนการเด้งของลูกธนูได้ถึงสองครั้ง"
             },
             {
                 "name": "E - RECON BOLT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/08/02.png",
                 "discription": "ติดตั้งธนูด้วย Recon Bolt กดยิงเพื่อปล่อยลูกธนู Recon Bolt ไปข้างหน้า ซึ่งจะทำงานเมื่อปะทะและเปิดเผยตำแหน่งของศัตรูใกล้เคียงที่อยู่ในรัศมีการมองเห็นของลูกธนู ศัตรูสามารถทำลายลูกธนูนี้ได้ กดยิงค้างไว้เพื่อเพิ่มระยะการยิง กดโหมดการยิงเสริมเพื่อเพิ่มจำนวนการเด้งของลูกธนูได้ถึงสองครั้ง"
             },
             {
                 "name": "C - OWL DRONE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/08/03.png",
                 "discription": "ติดตั้ง Owl Drone กดยิงเพื่อปล่อยโดรนออกไปและควบคุมการเคลื่อนไหวของมัน กดยิงในขณะที่ควบคุมโดรนเพื่อยิงลูกดอกระบุตำแหน่งซึ่งจะเปิดเผยตำแหน่งของผู้เล่นที่ถูกยิง"
             },
             {
                 "name": "X - HUNTER’S FURY",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/08/04.png",
                 "discription": "ติดตั้งธนูด้วยระเบิดพลังงานสูงสามนัดที่สามารถยิงได้ไกลและทะลุกำแพงได้ กดยิงเพื่อปล่อยระเบิดพลังงานไปยังเบื้องหน้าของ Sova สร้างดาเมจและเปิดเผยตำแหน่งของศัตรูที่อยู่ในแนวการยิง สกิลนี้สามารถใช้ซ้ำได้อีกสองครั้งขณะที่ยังอยู่ในระยะเวลาที่กำหนด"
             }
         ]
@@ -216,6 +256,7 @@
 
     }, {
         "name":"VIPER",
+        "path": "viper",
         "id":"09",
         "job":"CONTROLLER",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_09.png",
@@ -223,18 +264,22 @@
         "skill":[
             {
                 "name": "Q - POISON CLOUD",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/09/01.png",
                 "discription": "ติดตั้งระเบิดประจุควัน กดยิงเพื่อขว้างระเบิดที่จะคงอยู่ตลอดจนจบเกมออกไป กดใช้สกิลอีกครั้งเพื่อสร้างหมอกควันพิษด้วยเชื้อเพลิงที่มีอยู่ สกิลนี้สามารถใช้ซ้ำได้และสามารถหยิบระเบิดกลับขึ้นมาเพื่อใช้งานอีกครั้ง"
             },
             {
                 "name": "E - TOXIC SCREEN",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/09/02.png",
                 "discription": "ติดตั้งเครื่องปล่อยอุปกรณ์ประจุควัน กดยิงเพื่อติดตั้งอุปกรณ์ประจุควันเป็นแนวยาว กดใช้งานอีกครั้งเพื่อสร้างกำแพงควันพิษด้วยเชื้อเพลิงที่มีอยู่ สกิลนี้สามารถใช้ซ้ำได้มากกว่าหนึ่งครั้ง"
             },
             {
                 "name": "C - SNAKE BITE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/09/03.png",
                 "discription": "ติดตั้งเครื่องยิงสารเคมี ยิงเพื่อปล่อยกระป๋องที่จะระเบิดเมื่อตกถึงพื้น ก่อให้เกิดพื้นที่เขตเคมีที่สร้างดาเมจให้กับศัตรู"
             },
             {
                 "name": "X - VIPER’S PIT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/09/04.png",
                 "discription": "ติดตั้งเครื่องพ่นควันเคมี กดยิงเพื่อพ่นหมอกควันเคมีออกไปทุกทิศทางรอบ ๆ Viper สร้างกลุ่มหมอกควันขนาดใหญ่ซึ่งจะลดระยะการมองเห็นและค่าพลังชีวิตสูงสุดของผู้เล่นที่ติดอยู่ภายใน"
             }
         ]
@@ -243,6 +288,7 @@
     },
     {
         "name":"CYPHER",
+        "path": "cypher",
         "id":"10",
         "job":"SENTINEL",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_10.png",
@@ -250,18 +296,22 @@
         "skill":[
             {
                 "name": "Q - CYBER CAGE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/10/01.png",
                 "discription": "โยน Cyber Cage ไปยังเบื้องหน้าของ Cypher ทันที เปิดใช้งานเพื่อสร้างพื้นที่ที่จะบดบังวิสัยทัศน์และเริ่มเล่นเสียงแจ้งเตือนเมื่อศัตรูเดินผ่านมัน"
             },
             {
                 "name": "E - SPYCAM",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/10/02.png",
                 "discription": "ติดตั้ง Spycam กดยิงเพื่อติดตั้ง Spycam บนตำแหน่งที่ต้องการ กดใช้สกิลนี้อีกครั้งเพื่อเข้าควบคุมตัวกล้อง กดยิงในขณะที่ควบคุมกล้องเพื่อปล่อยลูกดอกระบุตำแหน่ง ลูกดอกจะเปิดเผยตำแหน่งของผู้เล่นที่ถูกยิงด้วยลูกดอกนี้"
             },
             {
                 "name": "C - TRAPWIRE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/10/03.png",
                 "discription": "ติดตั้ง Trapwire กดยิงเพื่อติดตั้งในตำแหน่งที่ต้องการ ซึ่ง Tripwire นั้นสามารถถูกทำลายได้และอำพรางตัวเองได้ โดยจะสร้างเส้นตรงขึ้นมาระหว่างตำแหน่งที่ติดตั้งไว้กับกำแพงที่อยู่ฝั่งตรงข้าม ศัตรูที่ข้ามผ่าน Tripwire จะถูกหน่วงไว้ เปิดเผยตำแหน่ง และอยู่ในอาการมึนงงเป็นระยะเวลาสั้น ๆ หากทำลายกับดักไม่ทันเวลา อุปกรณ์นี้สามารถหยิบกลับมาและใช้ซ้ำได้"
             },
             {
                 "name": "X - NEURAL THEFT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/10/04.png",
                 "discription": "ใช้ร่างของศัตรูที่ถูกสังหารอยู่ในเบื้องหน้าของคุณเพื่อเปิดเผยตำแหน่งของศัตรูที่ยังมีชีวิตอยู่ทันที"
             }
         ]
@@ -270,6 +320,7 @@
     },
     {
         "name":"REYNA",
+        "path": "reyna",
         "id":"11",
         "job":"DUELIST",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_11.png",
@@ -277,18 +328,22 @@
         "skill":[
             {
                 "name": "Q - DEVOUR",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/11/01.png",
                 "discription": "Soul Harvest: ศัตรูที่ถูกสังหารด้วย Reyna จะทิ้ง Soul Orb ที่สามารถคงอยู่เป็นเวลา 3 วินาที Devour: ใช้ Soul Orb ที่อยู่ใกล้เคียงในทันที เพื่อทำการฮีลอย่างรวดเร็วเป็นระยะเวลาสั้น ๆ พลังชีวิตที่ได้รับจากสกิลนี้ที่เกิน 100 หน่วยจะสลายตัวลงตามระยะเวลา หากสกิล EMPRESS ทำงานอยู่ สกิลนี้จะถูกร่ายโดยอัตโนมัติ และไม่ต้องใช้ Soul Orb"
             },
             {
                 "name": "E - DISMISS",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/11/02.png",
                 "discription": "ใช้ Soul Orb ที่อยู่ใกล้เคียงในทันที ทำให้ไร้ตัวตนเป็นระยะเวลาสั้น ๆ หากสกิล EMPRESS ทำงานอยู่ จะทำให้ล่องหนด้วย"
             },
             {
                 "name": "C - LEER",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/11/03.png",
                 "discription": "ติดตั้งดวงตา เพื่อทำลายการมองเห็น เปิดใช้งานเพื่อฟื้นฟูความสามารถในการมองเห็นเป็นระยะทางสั้น ๆ ข้างหน้า ศัตรูที่มองมันจะมองเห็นเป็นระยะทางสั้น ๆ เท่านั้น"
             },
             {
                 "name": "X - EMPRESS",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/11/04.png",
                 "discription": "เข้าสู่สถานะบ้าคลั่งในทันที ซึ่งจะเพิ่มความเร็วในการยิง การติดตั้งอุปกรณ์ และการรีโหลดอย่างมาก รับการชาร์จไม่จำกัดของสกิล Soul Harvest การสังหารจะทำให้เริ่มนับระยะเวลาใหม่อีกครั้ง"
             }
         ]
@@ -297,6 +352,7 @@
     },
     {
         "name":"KILLJOY",
+        "path": "killjoy",
         "id":"12",
         "job":"SENTINEL",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_12.png",
@@ -304,18 +360,22 @@
         "skill":[
             {
                 "name": "Q - ALARMBOT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/12/01.png",
                 "discription": "ติดตั้ง Alarmbot ลับ ยิงเพื่อปล่อยบอทที่จะไล่ล่าศัตรูที่อยู่ในรัศมี เมื่อไปถึงเป้าหมายของมันแล้ว บอทจะระเบิดเพื่อสร้างความเสียหายและทำให้ติดสถานะเปราะบาง กดปุ่มติดตั้งค้างไว้เพื่อเรียกบอทที่ถูกส่งออกไปกลับมา"
             },
             {
                 "name": "E - TURRET",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/12/02.png",
                 "discription": "ติดตั้ง Turret ยิงเพื่อปล่อยป้อมปืนที่จะยิงศัตรูในรูปกรวย 180 องศา กดปุ่มติดตั้งค้างไว้เพื่อเรียกป้อมปืนที่ถูกส่งออกไปกลับมา"
             },
             {
                 "name": "C - NANOSWARM",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/12/03.png",
                 "discription": "ติดตั้งระเบิด Nanoswarm ยิงเพื่อปาระเบิด เมื่อถึงพื้น Nanoswarm จะซ่อนตัวทันที เปิดใช้งาน Nanoswarm เพื่อปล่อยฝูง Nanobots ออกไปสร้างความเสียหาย"
             },
             {
                 "name": "X - LOCKDOWN",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/12/04.png",
                 "discription": "ติดตั้งอุปกรณ์กักขัง ยิงเพื่อปล่อยอุปกรณ์ หลังจากทิ้งไว้เป็นเวลานาน อุปกรณ์จะกักขังศัตรูทุกตัวที่อยู่ในรัศมี ศัตรูสามารถทำลายอุปกรณ์ได้"
             }
         ]
@@ -323,6 +383,7 @@
 
     }, {
         "name":"SKYE",
+        "path": "skye",
         "id":"13",
         "job":"INITIATOR",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_13.png",
@@ -330,18 +391,22 @@
         "skill":[
             {
                 "name": "Q - TRAILBLAZER",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/13/01.png",
                 "discription": "ติดตั้งเครื่องประดับเสือแทสเมเนียน ยิงเพื่อปล่อยนักล่าออกไปข้างหน้าและควบคุมมัน เมื่ออยู่ในการควบคุม ยิงเพื่อกระโจนไปข้างหน้า ระเบิดด้วยการสั่นสะเทือนและสร้างความเสียหายต่อศัตรูโดยตรง"
             },
             {
                 "name": "E - GUIDING LIGHT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/13/02.png",
                 "discription": "ติดตั้งเครื่องประดับเหยี่ยว ยิงเพื่อปล่อยมันออกไปข้างหน้า กดยิงค้างไว้เพื่อนำทางเหยี่ยวที่อยู่ในรัศมีเป้าเล็งของคุณ ใช้งานอีกครั้งในขณะที่เหยี่ยวยังคงบินอยู่เพื่อแปลงร่างมันเป็นแฟลชที่จะส่งเสียงเมื่อยิงโดนศัตรู หากศัตรูอยู่ในระยะการโจมตีและรัศมีการมองเห็น"
             },
             {
                 "name": "C - REGROWTH",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/13/03.png",
                 "discription": "ติดตั้งเครื่องประดับฮีล กดยิงค้างไว้เพื่อร่าย ฮีลพันธมิตรในระยะและรัศมีการมองเห็น สามารถใช้ซ้ำได้จนกว่าการฮีลของเธอจะหมดลง Skye ไม่สามารถฮีลตนเองได้"
             },
             {
                 "name": "X - SEEKERS",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/13/04.png",
                 "discription": "ติดตั้งเครื่องประดับ Seeker ยิงเพื่อส่ง Seeker ออกไปสามตัวและล่าตำแหน่งของศัตรูสามคนที่อยู่ใกล้ที่สุด หาก Seeker พบเป้าหมาย มันจะทำให้ศัตรูมองเห็นเพียงแค่ในระยะประชิดทันที"
             }
         ]
@@ -350,6 +415,7 @@
     },
     {
         "name":"YORU",
+        "path": "yoru",
         "id":"14",
         "job":"DUELIST",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_14.png",
@@ -357,18 +423,22 @@
         "skill":[
             {
                 "name": "Q - BLINDSIDE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/14/01.png",
                 "discription": "ติดตั้งเพื่อฉีกชิ้นส่วนห้วงมิติที่ไม่เสถียรออกจากความเป็นจริง ยิงเพื่อปาชิ้นส่วนออกไป ทำให้เกิดแสงสว่างวาบที่จะหมุนขึ้นเมื่อกระทบกับพื้นผิวแข็ง ๆ บนโลก"
             },
             {
                 "name": "E - GATECRASH",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/14/02.png",
                 "discription": "ติดตั้งเพื่อควบคุมโซ่ริฟท์ ยิงเพื่อปล่อยโซ่ให้พุ่งไปข้างหน้า กดโหมดยิงเสริมเพื่อวางโซ่ลง กดใช้เพื่อเคลื่อนย้ายไปยังตำแหน่งของโซ่"
             },
             {
                 "name": "C - FAKEOUT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/14/03.png",
                 "discription": "ติดตั้งเสียงสะท้อนที่คล้ายกับเสียงฝีเท้าเมื่อเปิดใช้งาน ยิงเพื่อเปิดใช้งานและส่งเสียงสะท้อนออกไปข้างหน้า กดโหมดยิงเสริมเพื่อวางเสียงสะท้อนลง กดใช้เสียงสะท้อนที่ยังไม่ถูกเปิดใช้งานเพื่อส่งไปข้างหน้า"
             },
             {
                 "name": "X - DIMENSIONAL DRIFT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/14/04.png",
                 "discription": "ติดตั้งหน้ากากที่ช่วยให้มองเห็นมิติต่าง ๆ ยิงเพื่อเข้าไปยังมิติของ Yoru ทำให้ศัตรูที่อยู่ภายนอกไม่สามารถมองเห็นหรือโจมตีเขาได้"
             }
         ]
@@ -377,6 +447,7 @@
     },
     {
         "name":"ASTRA",
+        "path": "astra",
         "id":"15",
         "job":"CONTROLLER",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_15.png",
@@ -384,18 +455,22 @@
         "skill":[
             {
                 "name": "Q - NOVA PULSE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/15/01.png",
                 "discription": "จัดวางดวงดาวใน Astral Form (X) เปิดใช้งานดวงดาวเพื่อจุดชนวน Nova Pulse สกิล Nova Pulse จะชาร์จครู่หนึ่งก่อนที่จะทำงาน สร้างความเสียหายแก่ผู้เล่นทุกคนที่อยู่ในบริเวณนั้น"
             },
             {
                 "name": "E - NEBULA",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/15/02.png",
                 "discription": "จัดวางดวงดาวใน Astral Form (X) เปิดใช้งานดวงดาวเพื่อแปลงมันเป็น Nebula (กลุ่มควัน) ใช้ (F) ไปที่ดวงดาวเพื่อกระจายมันออก ส่งคืนดาวเพื่อวางในตำแหน่งใหม่หลังจากดีเลย์ สลายเป็น Nebula ปลอมในเวลาสั้น ๆ ในตำแหน่งของดาวก่อนที่จะกลับมา"
             },
             {
                 "name": "C - GRAVITY WELL",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/15/03.png",
                 "discription": "จัดวางดวงดาวใน Astral Form (X) เปิดใช้งานดวงดาวเพื่อสร้าง Gravity Well ผู้เล่นที่อยู่ในบริเวณจะถูกดึงเข้าจุดศูนย์กลางก่อนที่มันจะระเบิด ส่งผลให้ผู้เล่นที่ติดอยู่ภายในได้รับสถานะเปราะบาง"
             },
             {
                 "name": "X - ASTRAL FORM / COSMIC DIVIDE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/15/04.png",
                 "discription": "เปิดใช้งาน (X) เพื่อเข้าสู่ Astral Form ที่คุณสามารถจัดวางดวงดาวกับอาวุธหลักของคุณ คุรสามารถเปิดใช้ดวงดาวอีกครั้งในภายหลังเพื่อแปลงพวกมันเป็น Nova Pulse, Nebula หรือ Gravity Well เมื่ออัลติเมทของเธอชาร์จแล้ว ใช้อาวุธเสริมใน Astral Form เพื่อเลือกตำแหน่งที่หนึ่ง แล้วใช้อาวุธหลักเพื่อเลือกตำแหน่งที่สอง จากนั้นก็สร้าง Cosmic Divide ที่ไม่มีที่สิ้นสุดเพื่อเชื่อมต่อทั้งสองจุด Cosmic Divide จะบล็อกกระสุนและลดทอนเสียงอย่างมาก"
             }
         ]
@@ -404,6 +479,7 @@
     },
     {
         "name":"KAY/O",
+        "path": "kay-o",
         "id":"16",
         "job":"INITIATOR",
         "imgpath":"/project/g41playvalorant/agent_content/pic/agent/A_16.png",
@@ -411,18 +487,22 @@
         "skill":[
             {
                 "name": "Q - FLASH/DRIVE",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/16/01.png",
                 "discription": "ติดตั้งระเบิดแฟลช ยิงเพื่อปา ระเบิดแฟลชจะระเบิดหลังจุดชนวนสั้น ๆ ทำให้ผู้เล่นทุกคนที่มองดูสูญเสียการมองเห็น"
             },
             {
                 "name": "E - ZERO/POINT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/16/02.png",
                 "discription": "ติดตั้งใบมีดยับยั้งพลัง ยิงเพื่อปา ใบมีดจะติดกับพื้นผิวแรกที่โดน ชาร์จสักครู่ แล้วยับยั้งพลังของทุกคนที่อยู่ในรัศมีระเบิด"
             },
             {
                 "name": "C - FRAG/MENT",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/16/03.png",
                 "discription": "ติดตั้งเศษชิ้นส่วนระเบิด ยิงเพื่อปา เศษชิ้นส่วนจะติดกับพื้นและระเบิดหลายครั้งติดต่อกัน สร้างความเสียหายเกือบถึงตายในพื้นที่ศูนย์กลางหลังการระเบิดแต่ละครั้ง"
             },
             {
                 "name": "X - NULL/CMD",
+                "img": "/project/g41playvalorant/agent_content/pic/skill/16/04.png",
                 "discription": "โอเวอร์โหลดทันทีด้วยพลังงาน Radianite เปลี่ยนขั้วที่จะเสริมพลัง KAY/O และปล่อยคลื่นพลังงานขนาดใหญ่จากพื้นที่ของเขา ศัตรูที่โดนคลื่นเหล่านี้จะถูกยับยั้งพลังเป็นระยะเวลาสั้น ๆ"
             }
         ]
