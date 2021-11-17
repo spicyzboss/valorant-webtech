@@ -10,23 +10,16 @@ const Item = styled(Slider)`
 const Banner = styled.div`
     height: 71vh;
     width: 100%;
-    background-color: green;
+    background: url('/project/g41playvalorant/img/community-code-banner.jpeg') no-repeat center;
+    background-size: cover;
 `
 
 const ContentSection = styled.div`
     background: #ece8e1;
     padding: 5vw 15vw;
-
+    position: relative;
 `
 
-const StraighText = styled.p`
-    position: fixed;
-    right: 6vw;
-    top: 32vh;
-    font-weight:600 ;
-    font-size: 15px;
-    transform: rotate(90deg);
-`
 const Wraptextgrey = styled.div`
     color: #768079;
     line-height: 1.5;
@@ -63,7 +56,7 @@ const SLickStyle = styled(Slider)`
     .slick-track .slick-active{
         filter: brightness(70%)
     }
-    
+
     .slick-dots{
         position: absolute;
         left: -250px;
@@ -108,6 +101,54 @@ const About = styled.div`
     margin:4px;
 
 `
+
+const TextDot = styled.span`
+    position: relative;
+    margin-left: 2rem;
+    color: #ff4655;
+    &::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: black;
+        position: absolute;
+        top: 40%;
+        left: -40%;
+    }
+`
+
+const RightWrapper = styled.div`
+    position: absolute;
+    right: 10vw;
+    top: 20vh;
+    height: 80%;
+`
+
+const StyledSocialIcon = styled.svg`
+    fill: #ff4655;
+    cursor: pointer;
+    transition: all .15s linear;
+
+    &:hover {
+        fill: #141e37;
+    }
+`
+
+const RotateText = styled.p`
+    transform: rotate(90deg);
+`
+
+const StickyWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 15px;
+    row-gap: 1rem;
+    top: 20vh;
+    position: sticky;
+`
+
 const CommunityCode = () => {
     let settings = {
         dots: true,
@@ -128,9 +169,25 @@ const CommunityCode = () => {
             <NavBar />
             <Banner></Banner>
             <ContentSection>
-                <p>02/06/63 x ประกาศ</p>
+                <RightWrapper>
+                    <StickyWrapper>
+                        <RotateText>แชร์:</RotateText>
+                        <StyledSocialIcon viewBox="0 0 100 100">
+                            <path d="M39.62 100V54H24.87c-.75 0-.75 0-.75-.5V37c0-.5.25-.5.75-.5h14.75V22.25a24.75 24.75 0 012.25-10.5A19.54 19.54 0 0152.12 2a22.75 22.75 0 019.76-2c3.75 0 7.75.25 11.5.25.74 0 1.5.25 2 .25s.51.25.51.5v14.75c0 .5-.25.5-.51.5h-8.76a21.88 21.88 0 00-4 .5 5.56 5.56 0 00-4.49 4.75 11.72 11.72 0 00-.26 3V36h16.75c.75 0 .75 0 .5.75-.5 3-.74 5.75-1.25 8.75a72.14 72.14 0 01-1 7.25c0 1 0 1-1 1H57.63V100z" />
+                        </StyledSocialIcon>
+                        <StyledSocialIcon viewBox="0 0 100 100">
+                            <path d="M31.41 90.66c37.74 0 58.39-31.3 58.39-58.39v-2.64A41.79 41.79 0 00100 19a41.57 41.57 0 01-11.8 3.24 20.62 20.62 0 009-11.37 40.55 40.55 0 01-13 5 20.52 20.52 0 00-35.49 14 22.67 22.67 0 00.52 4.68A58.29 58.29 0 016.92 13.11a20.6 20.6 0 006.37 27.41A20.75 20.75 0 014 38v.28a20.55 20.55 0 0016.45 20.08 20 20 0 01-5.4.72 20.27 20.27 0 01-3.85-.36A20.53 20.53 0 0030.37 73a41.15 41.15 0 01-25.49 8.8A39.47 39.47 0 010 81.49a58.39 58.39 0 0031.41 9.17" />
+                        </StyledSocialIcon>
+                        <StyledSocialIcon viewBox="0 0 24 24">
+                            <path d="M14.238 15.348a.215.215 0 010 .306c-.465.462-1.194.687-2.231.687l-.008-.002-.008.002c-1.036 0-1.766-.225-2.231-.688a.214.214 0 010-.305.219.219 0 01.307 0c.379.377 1.008.561 1.924.561l.008.002.008-.002c.915 0 1.544-.184 1.924-.561a.219.219 0 01.307 0zm-3.44-2.418a.922.922 0 00-1.845 0c0 .506.414.918.923.918a.92.92 0 00.922-.918zM24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zm-5-.129a1.548 1.548 0 00-2.624-1.108c-1.056-.695-2.485-1.137-4.066-1.194l.865-2.724 2.343.549-.003.034c0 .696.569 1.262 1.268 1.262.699 0 1.267-.566 1.267-1.262a1.266 1.266 0 00-2.446-.458l-2.525-.592a.216.216 0 00-.257.145l-.965 3.038c-1.656.02-3.155.466-4.258 1.181A1.546 1.546 0 005 11.871c0 .566.311 1.056.768 1.325-.03.164-.05.331-.05.5 0 2.281 2.805 4.137 6.253 4.137s6.253-1.856 6.253-4.137c0-.16-.017-.317-.044-.472.486-.261.82-.766.82-1.353zm-4.872.141a.921.921 0 00-.922.919.921.921 0 001.844 0 .921.921 0 00-.922-.919z" />
+                        </StyledSocialIcon>
+                        <StyledSocialIcon viewBox="0 0 50.438 49.94">
+                            <path d="M28.269 25.04a6.8 6.8 0 00-5.91-3.71h-.14a6.734 6.734 0 00-4.689 1.89l-9.552 9.17a6.754 6.754 0 00-.192 9.56 6.79 6.79 0 009.576.2s3.266-3.08 4.692-4.51c3.013 1.07 7.777.72 7.777.72l-8.376 8.04a12.674 12.674 0 11-17.57-18.27l9.552-9.17a12.688 12.688 0 0117.929.36 12.539 12.539 0 011.259 1.53zm-6.12-.16a6.777 6.777 0 005.91 3.7.646.646 0 00.139.01 6.731 6.731 0 004.688-1.89l9.553-9.17a6.77 6.77 0 10-9.384-9.76s-3.266 3.08-4.693 4.5c-3.013-1.07-7.776-.72-7.776-.72l8.375-8.04a12.674 12.674 0 1117.571 18.27l-9.553 9.17a12.675 12.675 0 01-17.928-.35 13.244 13.244 0 01-1.259-1.53z" fillRule="evenodd" />
+                        </StyledSocialIcon>
+                    </StickyWrapper>
+                </RightWrapper>
+                <p>02/06/63 <TextDot>ประกาศ</TextDot></p>
                 <Title>ระเบียบชุมชนของ VALORANT</Title>
-                <StraighText>แชร์</StraighText>
                 <Movetext>
                     <Blodtext2>ระเบียบชุมชนของ </Blodtext2>
                     <Blodtext>VALORANT</Blodtext>
