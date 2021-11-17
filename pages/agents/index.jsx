@@ -59,7 +59,7 @@ const SLickStyle = styled(Slider)`
 `
 const Box = styled.div`
     position: relative;
-    top: 10vh;
+    top: 80px;
     width: 100vw;
     display: block;
     box-sizing: border-box;
@@ -154,14 +154,14 @@ const Agents = () => {
             router.push(locale);
         }
     }
-    
+
     return (
         <>
 
             <Head title="เอเจนท์ VALORANT: เอเจนท์ทั้งหมด และสกิลของแต่ละคน" />
             <NavBar />
             <style>{ Agent_Css }</style>
-            <Box style={{ height: "100vh" }}> 
+            <Box style={{ height: "100vh" }}>
 
                 <SLickStyle ref={slider1} className="agent-name" {...setting1}>
                     {

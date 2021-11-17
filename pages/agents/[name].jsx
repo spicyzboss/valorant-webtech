@@ -17,7 +17,7 @@ const SLickStyle = styled(Slider)`
     }
     .slick-track{
         color: #ece8e1;
-        
+
     }
     .slick-track .slick-current{
         color: #ff4655;
@@ -37,7 +37,7 @@ const SkillBar = styled(Slider)`
 
 const Box = styled.div`
     position: relative;
-    top: 10vh;
+    top: 80px;
     width: 100vw;
     display: block;
     box-sizing: border-box;
@@ -172,17 +172,17 @@ const Agents = () => {
     const { name } = router.query;
     const [selected, setSelect] = useState(convert[name]);
     const [currentSkill, setCurrent] = useState(0);
-    
-    
+
+
     useEffect(()=> {
 
         slider1.current.slickGoTo(selected)
-        
+
     }, [selected])
     useEffect(()=> {
 
         slider1.current.slickGoTo(convert[name])
-        
+
     }, [router.asPath])
     const setting1 = {
         dots: false,
@@ -275,7 +275,7 @@ const Agents = () => {
                     </SkillBar>
                     <div className="skill_detail">
                         <h2>{data[convert[name]]?(data[convert[name]].skill[currentSkill].name):("")}</h2>
-                        <p>{data[convert[name]]?(data[convert[name]].skill[currentSkill].discription):("")}</p> 
+                        <p>{data[convert[name]]?(data[convert[name]].skill[currentSkill].discription):("")}</p>
                     </div>
                 </SkillContainer>
             </Box>
