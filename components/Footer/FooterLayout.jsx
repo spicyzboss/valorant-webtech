@@ -12,4 +12,5 @@ export const FooterLayout = styled.footer`
     row-gap: 32px;
     padding: 28px;
     font-family: 'Bai Jamjuree', sans-serif;
+    z-index: 4000;
 `
