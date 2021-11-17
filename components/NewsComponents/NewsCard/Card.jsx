@@ -4,10 +4,11 @@ import BlankCard from './BlankCard'
 
 const NewsCard = styled.div`
     position: relative;
-    width: 100%;
-    height: 100%;
+    width: ${props => props.width ? props.width : "100%"};
+    height: ${props => props.height ? props.height : "100%"};
     background: #0f1923;
     left: 0;
+
 `
 const CardContent = styled.div`
     width: 80%;
@@ -85,25 +86,25 @@ const ContentNumber = styled.div`
 
 `
 
-const Card = ({ data }) => {
-    const pic = `/project/g41playvalorant/news_content/pic/hot_news/${ data.ID }.jpeg`
+const Card = ({ data, width, height }) => {
+
     return (
         <>
-        <BlankCard>
-            <NewsCard>
-                <Picture className="hoverSlide">
-                    <RecomendImg src={pic} ></RecomendImg>
-                </Picture>
-                <ContentNumber>{ data.ID }</ContentNumber>
-                <div style={{ height: '8vh'}}/>
-                <CardContent>
-                        <Text style={{ display: 'block' }}>{ data.DATE }</Text>
-                        <ContentText><Text>{ data.TOPIC }</Text></ContentText>
-                        <ContentText style={{ DetailCss }}><Text>{ data.DETAIL }</Text></ContentText>
-                        <div style={{ width: '5px', height: '3px', background: '#ece8e1', bottom: '0', position: 'absolute'}}/>
-                </CardContent>
-             </NewsCard>
-        </BlankCard>
+            <BlankCard >
+                <NewsCard width={width} height={height}>
+                    <Picture className="hoverSlide">
+                        <RecomendImg src={data.IMGPATH} ></RecomendImg>
+                    </Picture>
+                    <ContentNumber>{data.ID}</ContentNumber>
+                    <div style={{ height: '8vh' }} />
+                    <CardContent>
+                        <Text style={{ display: 'block' }}>{data.DATE}</Text>
+                        <ContentText><Text>{data.TOPIC}</Text></ContentText>
+                        <ContentText style={{ DetailCss }}><Text>{data.DETAIL}</Text></ContentText>
+                        <div style={{ width: '5px', height: '3px', background: '#ece8e1', bottom: '0', position: 'absolute' }} />
+                    </CardContent>
+                </NewsCard>
+            </BlankCard>
         </>
     )
 }
